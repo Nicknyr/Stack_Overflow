@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Footer from './components/Footer';
+import Landing from './components/Landing';
+import About from './components/About';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faCoffee, faAngleRight } from '@fortawesome/free-solid-svg-icons'
@@ -24,6 +26,8 @@ const Button = styled.button`
 function App() {
   return (
     <div className="App">
+      <Landing />
+      <About />
       <Footer />
     </div>
   );
