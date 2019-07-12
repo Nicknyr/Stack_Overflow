@@ -4,9 +4,11 @@ import Footer from './components/Footer';
 import Landing from './components/Landing';
 import About from './components/About';
 import Features from './components/Features';
-import Navbar from './components/Navbar';
+import NavBar from './components/Navbar';
 import Plans from './components/Plans';
 import Hire from './components/Hire';
+import Learn from './components/Learn';
+import Jobs from './components/Jobs';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckSquare, faCoffee, faAngleRight, faCheck } from '@fortawesome/free-solid-svg-icons';
@@ -30,11 +32,14 @@ const Button = styled.button`
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Landing />
       <About />
       <Features />
       <Plans />
       <Hire />
+      <Learn />
+      <Jobs />
       <Footer />
     </div>
   );
