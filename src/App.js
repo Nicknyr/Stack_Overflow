@@ -3,11 +3,15 @@ import styled, { css } from 'styled-components';
 import Footer from './components/Footer';
 import Landing from './components/Landing';
 import About from './components/About';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import Features from './components/Features';
+import Navbar from './components/Navbar';
+import Plans from './components/Plans';
+import Hire from './components/Hire';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee, faAngleRight, faCheck } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faCheckSquare, faCoffee, faAngleRight);
+library.add(fab, faCheckSquare, faCoffee, faAngleRight, faCheck);
 
 const Button = styled.button`
   background: transparent;
@@ -28,6 +32,9 @@ function App() {
     <div className="App">
       <Landing />
       <About />
+      <Features />
+      <Plans />
+      <Hire />
       <Footer />
     </div>
   );

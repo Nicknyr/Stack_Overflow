@@ -9,7 +9,7 @@ const Styles = styled.div`
   background-color: #ffcf10;
   width: 100%;
   height: 35em;
-  margin-bottom: 20em;
+  margin-bottom: 2em;
   position: relative;
 `;
 
