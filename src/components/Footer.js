@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import stackoverflowLogo from '../assets/stack-overflow-logo.svg';
 
 const StyledFooter = styled.div`
   background-color: #242729;
@@ -47,14 +48,36 @@ const StyledFooter = styled.div`
     font-size: .7em;
   }
 
+  @media (min-width: 768px) {
+    h5 {
+      font-size: .8em;
+    }
+
+    ul li {
+      font-size: 1.1em;
+    }
+
+    .social li {
+      font-size: 1em;
+    }
+  }
+
 `;
 
+const CopyrightP = styled.p`
+  @media (min-width: 768px) {
+     margin-top: 10em;;
+   }
+`;
 
 const Footer = () => {
   return (
     <StyledFooter>
       <Row>
-        <Col xs={{span: 4}}>
+        <Col className="d-none d-md-block" md={{span: 1}}>
+          <img src={stackoverflowLogo} alt="stackoverflow logo" height="50" width="50" />
+        </Col>
+        <Col xs={{span: 4}} sm={{span: 3}} md={{span: 2, offset: 0}}>
           <h5>Stack Overflow</h5>
           <ul>
             <li><a href="#">Questions</a></li>
@@ -66,7 +89,7 @@ const Footer = () => {
             <li><a href="#">Disable Responsiveness</a></li>
           </ul>
         </Col>
-        <Col xs={{span: 3, offset: 1}}>
+        <Col xs={{span: 3, offset: 1}} sm={{span: 3, offset: 0}} md={{span: 2, offset: 0}}>
           <h5>Products</h5>
           <ul>
             <li><a href="#">Teams</a></li>
@@ -75,7 +98,7 @@ const Footer = () => {
             <li><a href="#">Enterprise</a></li>
           </ul>
         </Col>
-        <Col xs={{span: 3, offset: 1}}>
+        <Col xs={{span: 3, offset: 1}} sm={{span: 3, offset: 0}} md={{span: 2, offset: 0}}>
           <h5>Company</h5>
           <ul>
             <li><a href="#">About</a></li>
@@ -85,7 +108,7 @@ const Footer = () => {
             <li><a href="#">Contact Us</a></li>
           </ul>
         </Col>
-        <Col xs="4">
+        <Col xs="4" sm={{span: 3}}>
           <h5>Stack Exchange Network</h5>
           <ul>
             <li>
@@ -110,16 +133,14 @@ const Footer = () => {
             </li>
           </ul>
         </Col>
-        <Col xs="12">
+        <Col xs="12" md={{span: 2}}>
           <ul class="social">
             <li><a href="#">Blog</a></li>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Twitter</a></li>
             <li><a href="#">LinkedIn</a></li>
           </ul>
-        </Col>
-        <Col xs="12">
-          <p>site design / logo © 2019 Stack Exchange Inc; user contributions licensed under cc by-sa 3.0 with attribution required. rev 2019.7.9.34262</p>
+          <CopyrightP>site design / logo © 2019 Stack Exchange Inc; user contributions licensed under cc by-sa 3.0 with attribution required. rev 2019.7.9.34262</CopyrightP>
         </Col>
       </Row>
     </StyledFooter>

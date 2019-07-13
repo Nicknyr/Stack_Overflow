@@ -10,20 +10,14 @@ const Styles = styled.div`
   height: auto;
   clip-path: polygon(0 0, 100% 4vw, 100% calc(100% - 4vw), 0 100%);
   margin-top: -3em;
-
-  svg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
+  position: relative;
 `;
 
 const CustomCard = styled(Card)`
-  width: 17em;
-  margin-left: auto;
-  margin-right: auto;
+  positon: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
   margin-bottom: 2em;
 
   .card-body {
@@ -44,18 +38,8 @@ const CustomCard = styled(Card)`
     padding: 1em .5em;
   }
 
-  .fa-check {
-    display: inline-block;
-  }
-
-  .fa-ul {
-    background: red;
-    padding-left: 0;
-    margin-left: 0;
-  }
-
-  .fa-li {
-    width: 100%;
+  ul li {
+    margin-top: .5em;
   }
 
   .card-text {
@@ -83,10 +67,7 @@ const P = styled.p`
   font-size: .95em;
   color: white;
   line-height: 1.3;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 `;
 
 const A = styled.a`
@@ -110,8 +91,10 @@ const CustomButton = styled(Button)`
   background: #f2720c;
   color: white;
   border: none;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
 
   &:hover {
     background: #f2720c;
@@ -143,83 +126,94 @@ const Plans = () => {
     <Styles>
       <CONTAINER>
       <Row>
-        <H2>Unlock siloed knowledge with Stack Overflow for Teams</H2>
-        <Bar></Bar>
-        <P>
-          Wikis, chat messages, or formal documentation for knowledge management aren’t effective. Our question and answer format is a proven approach for accessing the right information in less time.
-        </P>
-        <CustomButton>Learn more</CustomButton>
+        <Col xs={{span: 12}} md={{span: 8, offset: 2}}>
+          <H2>Unlock siloed knowledge with Stack Overflow for Teams</H2>
+          <Bar></Bar>
+        </Col>
+        <Col xs={{span: 10, offset: 1}} md={{span: 8, offset: 2}}>
+          <P>
+            Wikis, chat messages, or formal documentation for knowledge management aren’t effective. Our question and answer format is a proven approach for accessing the right information in less time.
+          </P>
+          <CustomButton>Learn more</CustomButton>
+        </Col>
       </Row>
-      <CustomCard>
-        <Card.Body>
-          <ListGroup variant="flush">
-            <ListGroup.Item>
-              <Card.Title className="text-center">Basic</Card.Title>
-              <Card.Subtitle>Private Q&A for teams</Card.Subtitle>
-            </ListGroup.Item>
-          </ListGroup>
-            <Card.Text>
-              <ul>
-               <li>$5 Per user / month billed annually</li>
-               <li>Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account.</li>
-               <li>Free 14 day trial</li>
-               <li> A single team hosted on stackoverflow.com</li>
-               <li>Unlimited private questions and answers</li>
-               <li>Searchable archive</li>
-              </ul>
-              <BlueButton variant="primary" className="text-center">Create your team</BlueButton>
-            </Card.Text>
-        </Card.Body>
-        </CustomCard>
-        <CustomCard>
-        <Card.Body>
-          <ListGroup variant="flush">
-              <ListGroup.Item>
-                <Card.Title className="text-center">Business</Card.Title>
-                <Card.Subtitle>
-                  Private Q&A with secure single sign-on and premium features for your whole organization
-                </Card.Subtitle>
-              </ListGroup.Item>
-          </ListGroup>
-            <Card.Text>
-              <ul>
-               <li>$11 Per user / month billed annually</li>
-               <li>All the features of Basic</li>
-               <li>Single Sign-On (SSO), with SAML</li>
-               <li> Invoicing</li>
-               <li>Reporting and Analytics</li>
-               <li>Priority customer support</li>
-               <li>99.5% uptime</li>
-              </ul>
-              <BlueButton variant="primary" className="text-center">Request a demo</BlueButton>
-            </Card.Text>
-        </Card.Body>
-        </CustomCard>
-        <CustomCard>
-        <Card.Body>
-          <ListGroup variant="flush">
-              <ListGroup.Item>
-                <Card.Title className="text-center">Enterprise</Card.Title>
-                <Card.Subtitle>
-                  Your own standalone Q&A community, with enhanced security and flexible hosting options
-                </Card.Subtitle>
-              </ListGroup.Item>
-          </ListGroup>
-            <Card.Text>
-              <ul>
-               <li>$17 Per user / month billed annually</li>
-               <li>All the features of Basic and Business</li>
-               <li>Host on your cloud, your own servers, or our private cloud</li>
-               <li>Single Sign-On: AD, SAML</li>
-               <li>Robust Read and Write API</li>
-               <li>Dedicated Customer Success and Community Building</li>
-               <li>99.5% uptime</li>
-               <li>Customized Themes and Privileges</li>
-              </ul>
-              <BlueButton variant="primary" className="text-center">Request a demo</BlueButton>
-            </Card.Text>
-        </Card.Body>
-       </CustomCard>
+      <Row>
+        <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
+          <CustomCard small>
+            <Card.Body>
+              <ListGroup variant="flush">
+                <ListGroup.Item>
+                  <Card.Title className="text-center">Basic</Card.Title>
+                  <Card.Subtitle>Private Q&A for teams</Card.Subtitle>
+                </ListGroup.Item>
+              </ListGroup>
+                <Card.Text>
+                  <ul>
+                   <li>$5 Per user / month billed annually</li>
+                   <li>Free 14 day trial</li>
+                   <li> A single team hosted on stackoverflow.com</li>
+                   <li>Unlimited private questions and answers</li>
+                   <li>Searchable archive</li>
+                  </ul>
+                  <BlueButton variant="primary" className="text-center">Create your team</BlueButton>
+                </Card.Text>
+            </Card.Body>
+            </CustomCard>
+          </Col>
+          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
+            <CustomCard medium>
+            <Card.Body>
+              <ListGroup variant="flush">
+                  <ListGroup.Item>
+                    <Card.Title className="text-center">Business</Card.Title>
+                    <Card.Subtitle>
+                      Private Q&A with secure single sign-on and premium features for your whole organization
+                    </Card.Subtitle>
+                  </ListGroup.Item>
+              </ListGroup>
+                <Card.Text>
+                  <ul>
+                   <li>$11 Per user / month billed annually</li>
+                   <li>All the features of Basic</li>
+                   <li>Single Sign-On (SSO), with SAML</li>
+                   <li> Invoicing</li>
+                   <li>Reporting and Analytics</li>
+                   <li>Priority customer support</li>
+                   <li>99.5% uptime</li>
+                  </ul>
+                  <BlueButton variant="primary" className="text-center">Request a demo</BlueButton>
+                </Card.Text>
+            </Card.Body>
+          </CustomCard>
+          </Col>
+          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset:0}}>
+            <CustomCard large>
+            <Card.Body>
+              <ListGroup variant="flush">
+                  <ListGroup.Item>
+                    <Card.Title className="text-center">Enterprise</Card.Title>
+                    <Card.Subtitle>
+                      Your own standalone Q&A community, with enhanced security and flexible hosting options
+                    </Card.Subtitle>
+                  </ListGroup.Item>
+              </ListGroup>
+                <Card.Text>
+                  <ul>
+                   <li>$17 Per user / month billed annually</li>
+                   <li>All the features of Basic and Business</li>
+                   <li>Host on your cloud, your own servers, or our private cloud</li>
+                   <li>Single Sign-On: AD, SAML</li>
+                   <li>Robust Read and Write API</li>
+                   <li>Dedicated Customer Success and Community Building</li>
+                   <li>99.5% uptime</li>
+                   <li>Customized Themes and Privileges</li>
+                  </ul>
+                  <BlueButton variant="primary" className="text-center">Request a demo</BlueButton>
+                </Card.Text>
+            </Card.Body>
+           </CustomCard>
+         </Col>
+       </Row>
       </CONTAINER>
     </Styles>
   );

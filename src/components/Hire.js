@@ -2,22 +2,21 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Card, Button, Container, Row, Col, ButtonToolbar, ListGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import jobsTech from '../assets/jobs-tech.svg';
 
 const Styles = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:700&display=swap');
   background: ##f7f6f9;
   width: 100%;
-  height: auto;
+  height: 130VH;
   clip-path: polygon(0 4vw, 100% 0, 100% calc(100% - 4vw), 0 100%);
   margin-top: -3em;
 
-  svg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
+  .section {
+    margin-top: 4em;
   }
+
+
 `;
 
 const CustomButton = styled(Button)`
@@ -49,12 +48,22 @@ const BlueButton = styled(Button)`
 const CONTAINER = styled(Container)`
   padding-top: 5em;
   padding-bottom: 5em;
-  padding-left: 3em;
-  padding-right: 3em;
+
 `;
 
 const H3 = styled.h3`
   font-family: 'Roboto Slab', serif;
+  font-size: 1.4em;
+  font-weight: bolder;
+`;
+
+const P = styled.p`
+  color: #242729;
+  font-size: .9em;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 `;
 
 const Hire = () => {
@@ -62,18 +71,22 @@ const Hire = () => {
     <Styles>
       <CONTAINER>
        <Row>
-        <H3>Hire your technical talent</H3>
-        <p>
-          We help expand your technical hiring strategy to promote your employer brand and highlight relevant open roles to our community of 50 million monthly visitors.
-        </p>
-        <CustomButton>Stack Overflow Talent</CustomButton>
-       </Row>
-       <Row>
-        <H3>Reach developers worldwide</H3>
-        <p>
-          Use the world’s largest resource for people who code to help you increase awareness and showcase your product or service across Stack Overflow’s network of Q&A sites.
-        </p>
-        <CustomButton>Stack Overflow Advertising</CustomButton>
+         <Col xs={12} md={6} className="section">
+           <img src={jobsTech} height="75" width="75"/>
+           <H3>Hire your technical talent</H3>
+           <P>
+             We help expand your technical hiring strategy to promote your employer brand and highlight relevant open roles to our community of 50 million monthly visitors.
+           </P>
+           <CustomButton>Stack Overflow Talent</CustomButton>
+         </Col>
+         <Col xs={12} md={6} className="section">
+           <img src={jobsTech} height="75" width="75"/>
+           <H3>Reach developers worldwide</H3>
+           <P>
+             Use the world’s largest resource for people who code to help you increase awareness and showcase your product or service across Stack Overflow’s network of Q&A sites.
+           </P>
+          <CustomButton>Stack Overflow Advertising</CustomButton>
+          </Col>
        </Row>
       </CONTAINER>
     </Styles>
