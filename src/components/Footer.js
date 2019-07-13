@@ -49,6 +49,8 @@ const StyledFooter = styled.div`
   }
 
   @media (min-width: 768px) {
+    padding-top: 2em;
+
     h5 {
       font-size: .8em;
     }

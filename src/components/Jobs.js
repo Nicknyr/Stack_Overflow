@@ -13,8 +13,7 @@ const Styles = styled.div`
   clip-path: polygon(0 0, 100% 4vw, 100% 100%, 0 100%);
   background-color: #E1ECF4;
   width: 100%;
-  height: 60em;
-  padding-bottom: 10em;
+  height: auto;
   position: relative;
 
   .robot {
