@@ -3,20 +3,21 @@ import styled, { css } from 'styled-components';
 import { Card, Button, Container, Row, Col, ButtonToolbar, ListGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import jobsTech from '../assets/jobs-tech.svg';
+import findCandidate from '../assets/find-candidate.svg';
+import privateQuestions from '../assets/private-questions.svg';
+import accelerate from '../assets/accelerate.svg';
 
 const Styles = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:700&display=swap');
-  background: ##f7f6f9;
+  background: #f7f6f9;
+  clip-path: polygon(0 2vw, 100% 0, 100% calc(100% - 2vw), 0 100%);
   width: 100%;
-  height: 130VH;
-  clip-path: polygon(0 4vw, 100% 0, 100% calc(100% - 4vw), 0 100%);
+  height: auto;
   margin-top: -3em;
 
   .section {
     margin-top: 4em;
   }
-
-
 `;
 
 const CustomButton = styled(Button)`
@@ -72,7 +73,7 @@ const Hire = () => {
       <CONTAINER>
        <Row>
          <Col xs={12} md={6} className="section">
-           <img src={jobsTech} height="75" width="75"/>
+           <img src={findCandidate} height="75" width="75"/>
            <H3>Hire your technical talent</H3>
            <P>
              We help expand your technical hiring strategy to promote your employer brand and highlight relevant open roles to our community of 50 million monthly visitors.
@@ -80,7 +81,7 @@ const Hire = () => {
            <CustomButton>Stack Overflow Talent</CustomButton>
          </Col>
          <Col xs={12} md={6} className="section">
-           <img src={jobsTech} height="75" width="75"/>
+           <img src={accelerate} height="75" width="75"/>
            <H3>Reach developers worldwide</H3>
            <P>
              Use the world’s largest resource for people who code to help you increase awareness and showcase your product or service across Stack Overflow’s network of Q&A sites.

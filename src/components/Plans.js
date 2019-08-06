@@ -138,7 +138,7 @@ const Plans = () => {
         </Col>
       </Row>
       <Row>
-        <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
+        <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}} className="d-flex align-items-end">
           <CustomCard small>
             <Card.Body>
               <ListGroup variant="flush">
@@ -160,7 +160,7 @@ const Plans = () => {
             </Card.Body>
             </CustomCard>
           </Col>
-          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
+          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}} className="d-flex align-items-end">
             <CustomCard medium>
             <Card.Body>
               <ListGroup variant="flush">
@@ -186,7 +186,7 @@ const Plans = () => {
             </Card.Body>
           </CustomCard>
           </Col>
-          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset:0}}>
+          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset:0}} className="d-flex align-items-end">
             <CustomCard large>
             <Card.Body>
               <ListGroup variant="flush">

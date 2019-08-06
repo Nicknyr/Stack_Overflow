@@ -2,6 +2,9 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Card, Button, Container, Row, Col, ButtonToolbar } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import findCandidate from '../assets/find-candidate.svg';
+import privateQuestions from '../assets/private-questions.svg';
+import accelerate from '../assets/accelerate.svg';
 
 const Styles = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:700&display=swap');
@@ -9,13 +12,31 @@ const Styles = styled.div`
   background-color: #f7f6f9 ;
   width: 100%;
   height: auto;
-`;
 
-const CustomCard = styled(Card)`
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2em;
+  .feature-container {
+    background: white;
+    height: 9em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(59,64,69,0.2);
+    line-height: 1.2;
+    font-size: 1em;
+    border-radius: 5px;
+
+    p {
+      color: #242729;
+      font-size: 1em;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    @media(min-width: 768px) {
+      height: 15em;
+      padding: 20px;
+    }
+  }
+
 `;
 
 const H2 = styled.h2`
@@ -77,36 +98,36 @@ const Features = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
-            <CustomCard>
-              <Card.Body>
-                <Card.Title className="text-center">Public Q&A</Card.Title>
-                <Card.Text>
-                  Quickly find and share internal knowledge with <A href="$">Private Q&A</A>
-                </Card.Text>
-              </Card.Body>
-             </CustomCard>
+          <Col xs={{span: 8, offset: 2}} md={{span: 3, offset: 1}}>
+            <Row className="feature-container">
+              <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
+                <img src={findCandidate} alt="find candidate" height="75" width="75" />
+              </Col>
+              <Col xs={{span: 8, offset: 0}} md={{span: 10, offset: 1}}>
+                <p>Quickly find and share internal knowledge with <A href="$">Private Q&A</A></p>
+              </Col>
+            </Row>
            </Col>
-           <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
-             <CustomCard>
-               <Card.Body>
-                 <Card.Title className="text-center">Public Q&A</Card.Title>
-                 <Card.Text>
-                   Find the perfect candidate for your growing technical team with <A href="#">Talent solutions</A>
-                 </Card.Text>
-               </Card.Body>
-              </CustomCard>
+           <Col xs={{span: 8, offset: 2}} md={{span: 3, offset: 1}}>
+             <Row className="feature-container">
+               <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
+                 <img src={privateQuestions} alt="private questions" height="75" width="75" />
+               </Col>
+               <Col xs={{span: 8, offset: 0}} md={{span: 10, offset: 1}}>
+                 <p>Find the perfect candidate for your growing technical team with Talent solutions</p>
+              </Col>
+             </Row>
             </Col>
-            <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
-              <CustomCard>
-                <Card.Body>
-                  <Card.Title className="text-center">Public Q&A</Card.Title>
-                  <Card.Text>
-                    Accelerate the discovery of your products or services through our <A href="#">Advertising platform</A>
-                  </Card.Text>
-                </Card.Body>
-               </CustomCard>
-           </Col>
+            <Col xs={{span: 8, offset: 2}} md={{span: 3, offset: 1}}>
+              <Row className="feature-container">
+                <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
+                  <img src={accelerate} alt="accelerate" height="75" width="75" />
+                </Col>
+                <Col xs={{span: 8, offset: 0}} md={{span: 10, offset: 1}}>
+                  <p>Accelerate the discovery of your products or services through our <A href="#">Advertising platform</A></p>
+                </Col>
+              </Row>
+              </Col>
            </Row>
       </CONTAINER>
     </Styles>

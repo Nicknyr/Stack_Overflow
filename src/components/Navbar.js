@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled, { css } from 'styled-components';
 import sprites from '../assets/sprites.svg';
+import logo from '../assets/stack-overflow-logo-large.svg';
 import {
   Navbar,
   Nav,
@@ -9,49 +10,75 @@ import {
   FormControl,
   Button,
   Container,
-  Brand } from 'react-bootstrap';
+  Brand,
+  Col,
+  Row} from 'react-bootstrap';
 
 const NAVBAR = styled(Navbar)`
   .form-inline {
     width: 60%;
   }
 
-  .form-inline .form-control {
+  .form-inline {
     width: 70%;
-    margin-right: 20%;
+  }
+
+  .form-control {
+    width: 80%;
+  }
+
+  .navbar-nav {
+    width: 30%;
   }
 
   .navbar-brand {
-    background: url('../assets/sprites.svg') no-repeat 0 -500px;
-    width: 150px;
-    height: 30px;
+    width: 12%;
   }
 
   .nav-link {
-    background: #F48024;
+    font-size: 14px;
+    font-weight: 500;
   }
+
 `;
 
+const BUTTON = styled(Button)`
+  font-size: 12px;
+  font-weight: bold;
+  background: #0095ff;
+  border: 1px solid #07c;
+  box-shadow: inset 0 1px 0 #66bfff;
+`;
+
+const loginButton = styled(Button)`
+  font-size: 12px;
+`;
 
 class NavBar extends Component {
   render() {
     return (
-      <NAVBAR bg="light" expand="lg">
-        <Navbar.Brand href="#home"></Navbar.Brand>
+      <NAVBAR bg="light" expand="md">
+        <Navbar.Brand href="#home" className="mr-4">
+          <img
+            src={logo}
+            height="40"
+            width="200"
+            className="d-inline-block align-middle"
+            alt="stackoverflow logo"
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="mr-2">
             <Nav.Link href="#home">Products</Nav.Link>
             <Nav.Link href="#link">Customers</Nav.Link>
             <Nav.Link href="#home">Use cases</Nav.Link>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Navbar.Text>
-                Log In
-              </Navbar.Text>
-            <Button variant="outline-success">Sign Up</Button>
-          </Form>
+            <Form inline>
+              <FormControl type="text" placeholder="Search" className="mr-sm-2"/>
+              <loginButton className="mr-2">Log In</loginButton>
+              <BUTTON>Sign Up</BUTTON>
+            </Form>
         </Navbar.Collapse>
       </NAVBAR>
     );

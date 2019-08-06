@@ -11,9 +11,15 @@ const Styles = styled.div`
   background-color: white;
   width: 100%;
   height: auto;
+  padding-bottom: 3em;
 
   img {
-    margin: 1.2em;
+     margin: 1.2em;
+  }
+
+  .greeting {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
   }
 
 
@@ -25,7 +31,9 @@ const CustomCard = styled(Card)`
     bottom: 100px;
   `}
 
-  margin-bottom: 2em;
+  padding: 1em;
+  height: auto;
+  margin-bottom: 2.5em;
   -webkit-box-shadow: 0px 6px 15px 1px rgba(212,208,212,0.76);
   -moz-box-shadow: 0px 6px 15px 1px rgba(212,208,212,0.76);
   box-shadow: 0px 6px 15px 1px rgba(212,208,212,0.76);
@@ -38,8 +46,26 @@ const CustomCard = styled(Card)`
 
   .card-title {
     font-family: 'Roboto Slab', serif;
-    font-weight: light;
+    font-weight: 200;
     color: 242729;
+    font-size: 1.3em;
+  }
+
+  .card-text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 10em;
+    color: #242729;
+    line-height: 1.3;
+    font-size: .9em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -47,8 +73,9 @@ const H2 = styled.h2`
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.5em;
-  font-weight: bolder;
+  margin-bottom: 16px;
+  font-size: 1.6em;
+  font-weight: 700;
   font-family: 'Roboto Slab', serif;
   width: 100%;
 `;
@@ -56,13 +83,13 @@ const H2 = styled.h2`
 const P = styled.p`
   text-align: center;
   font-weight: 500;
-  font-size: 1em;
+  font-size: .96em;
   color: #242729;
-  line-height: 1.3;
-  width: 90%;
+  line-height: 1.2;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 3em;
+  margin-bottom: 24px;
 `;
 
 const A = styled.a`
@@ -78,22 +105,24 @@ const Bar = styled.div`
   background: #f2720c;
   width: 80px;
   height: 6px;
-  margin: 1.3em auto;
+  margin: 1.9em auto;
   display: block;
 `;
 
-const CardP = styled.p`
-  text-align: center;
-  font-weight: 500;
-  font-size: 1em;
-  color: #242729;
-  line-height: 1.3;
-  font-size: 13px;
-`;
 
 const BUTTON = styled(Button)`
   display: block;
   border: none;
+  font-size: .9em;
+  font-weight: 500;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: auto;
+  height: 3em;
+  margin-left: auto;
+  margin-right: auto;
 
   ${props => props.purple && css`
     background: #2b2d6e;
@@ -119,7 +148,7 @@ const About = () => {
     <Styles>
       <Container>
       <Row>
-        <Col xs={{span: 12}} md={{span: 8, offset: 2}}>
+        <Col className="greeting" xs={{span: 12}} md={{span: 8, offset: 2}}>
           <H2 >For developers, by developers</H2>
           <Bar></Bar>
           <P>
@@ -128,7 +157,7 @@ const About = () => {
         </Col>
       </Row>
       <Row>
-        <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
+        <Col xs={{span:8, offset: 2}} md={{span: 4, offset: 0}}>
           {/* Only show animated CustomCard on large screens */}
           <CustomCard data-aos="fade-right" className="d-none d-lg-block">
             <Col xs={{span: 8, offset: 2}}>
@@ -137,9 +166,7 @@ const About = () => {
             <Card.Body>
               <Card.Title className="text-center">Public Q&A</Card.Title>
               <Card.Text>
-                <CardP>
                   Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account.
-                </CardP>
               </Card.Text>
               <Col xs={{span: 8, offset: 2}}>
                 <BUTTON purple>Browse Questions</BUTTON>
@@ -148,17 +175,15 @@ const About = () => {
            </CustomCard>
            {/* On xs, sm, md screens show CustomCard without animation */}
            <CustomCard className="d-block d-lg-none">
-             <Col xs={{span: 8, offset: 2}}>
+             <Col xs={{span: 12}}>
                <img src={publicqa} alt="public qa" height="82" width="128" />
              </Col>
              <Card.Body>
                <Card.Title className="text-center">Public Q&A</Card.Title>
                <Card.Text>
-                 <CardP>
                    Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account.
-                 </CardP>
                </Card.Text>
-               <Col xs={{span: 8, offset: 2}}>
+               <Col xs={{span: 12}}>
                  <BUTTON purple>Browse Questions</BUTTON>
                </Col>
              </Card.Body>
@@ -173,9 +198,7 @@ const About = () => {
              <Card.Body>
                <Card.Title className="text-center">Private Q&A</Card.Title>
                <Card.Text>
-                 <CardP>
                     Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
-                 </CardP>
                </Card.Text>
                <Col xs={{span: 6, offset: 3}}>
                  <BUTTON orange>Learn more</BUTTON>
@@ -184,17 +207,15 @@ const About = () => {
             </CustomCard>
              {/* On xs, sm, md screens show CustomCard without animation */}
             <CustomCard className="d-block d-lg-none">
-              <Col xs={{span: 8, offset: 2}}>
+              <Col xs={{span: 12}}>
                 <img src={privateqa} alt="private qa" height="82" width="128"/>
               </Col>
               <Card.Body>
                 <Card.Title className="text-center">Private Q&A</Card.Title>
                 <Card.Text>
-                  <CardP>
                      Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
-                  </CardP>
                 </Card.Text>
-                <Col xs={{span: 6, offset: 3}}>
+                <Col xs={{span: 12}}>
                   <BUTTON orange>Learn more</BUTTON>
                 </Col>
               </Card.Body>
@@ -209,9 +230,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title className="text-center">Browse jobs</Card.Title>
                 <Card.Text>
-                  <CardP>
                     Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more.
-                  </CardP>
                 </Card.Text>
                 <Col xs={{span: 6, offset: 3}}>
                   <BUTTON purple>Find a job</BUTTON>
@@ -220,17 +239,15 @@ const About = () => {
              </CustomCard>
              {/* On xs, sm, md screens show CustomCard without animation */}
              <CustomCard className="d-block d-lg-none">
-               <Col xs={{span: 8, offset: 2}}>
+               <Col xs={{span: 12}}>
                  <img src={jobs} alt="jobs" height="67" width="128"/>
                </Col>
                <Card.Body>
                  <Card.Title className="text-center">Browse jobs</Card.Title>
                  <Card.Text>
-                   <CardP>
                      Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more.
-                   </CardP>
                  </Card.Text>
-                 <Col xs={{span: 6, offset: 3}}>
+                 <Col xs={{span: 12}}>
                    <BUTTON purple>Find a job</BUTTON>
                  </Col>
                </Card.Body>
