@@ -12,21 +12,24 @@ const Styles = styled.div`
   background-color: #f7f6f9 ;
   width: 100%;
   height: auto;
+  padding-bottom: 3em;
 
   .feature-container {
     background: white;
-    height: 9em;
-    margin-bottom: 1em;
+    height: 8em;
+    margin-bottom: 2em;
     display: flex;
     align-items: center;
     box-shadow: 0 4px 8px rgba(59,64,69,0.2);
     line-height: 1.2;
     font-size: 1em;
     border-radius: 5px;
+    padding: 1em;
 
     p {
       color: #242729;
-      font-size: 1em;
+      font-size: .9em;
+      font-weight: 500;
       margin-bottom: 0;
       margin-top: 0;
     }
@@ -44,10 +47,10 @@ const H2 = styled.h2`
   margin-left: auto;
   margin-right: auto;
   margin-top: 3em;
-  font-size: 1.5em;
-  font-weight: bolder;
   font-family: 'Roboto Slab', serif;
   width: 100%;
+  font-size: 1.6em;
+  font-weight: 700;
 `;
 
 const Bar = styled.div`
@@ -61,12 +64,13 @@ const Bar = styled.div`
 const P = styled.p`
   text-align: center;
   font-weight: 500;
-  font-size: .95em;
-  color: 242729;
-  line-height: 1.3;
-  width: 90%;
+  font-size: .96em;
+  color: #242729;
+  line-height: 1.2;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3em;
   margin-bottom: 3em;
 `;
 
@@ -103,7 +107,7 @@ const Features = () => {
               <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
                 <img src={findCandidate} alt="find candidate" height="75" width="75" />
               </Col>
-              <Col xs={{span: 8, offset: 0}} md={{span: 10, offset: 1}}>
+              <Col xs={{span: 8, offset: 1}} md={{span: 10, offset: 1}}>
                 <p>Quickly find and share internal knowledge with <A href="$">Private Q&A</A></p>
               </Col>
             </Row>
@@ -113,7 +117,7 @@ const Features = () => {
                <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
                  <img src={privateQuestions} alt="private questions" height="75" width="75" />
                </Col>
-               <Col xs={{span: 8, offset: 0}} md={{span: 10, offset: 1}}>
+               <Col xs={{span: 8, offset: 1}} md={{span: 10, offset: 1}}>
                  <p>Find the perfect candidate for your growing technical team with Talent solutions</p>
               </Col>
              </Row>
@@ -123,7 +127,7 @@ const Features = () => {
                 <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
                   <img src={accelerate} alt="accelerate" height="75" width="75" />
                 </Col>
-                <Col xs={{span: 8, offset: 0}} md={{span: 10, offset: 1}}>
+                <Col xs={{span: 8, offset: 1}} md={{span: 10, offset: 1}}>
                   <p>Accelerate the discovery of your products or services through our <A href="#">Advertising platform</A></p>
                 </Col>
               </Row>
