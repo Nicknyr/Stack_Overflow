@@ -9,6 +9,7 @@ import Plans from './components/Plans';
 import Hire from './components/Hire';
 import Learn from './components/Learn';
 import Jobs from './components/Jobs';
+import Questions from './components/Questions';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckSquare, faCoffee, faAngleRight, faCheck } from '@fortawesome/free-solid-svg-icons';
@@ -38,6 +39,7 @@ function App() {
       <Features />
       <Plans />
       <Hire />
+      <Questions />
       <Learn />
       <Jobs />
       <Footer />

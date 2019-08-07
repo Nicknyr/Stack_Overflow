@@ -13,6 +13,7 @@ const Styles = styled.div`
   clip-path: polygon(0 0, 100% 4vw, 100% calc(100% - 4vw), 0 100%);
   margin-top: -3em;
   position: relative;
+  padding-bottom: 3em;
 `;
 
 const CustomCard = styled(Card)`
@@ -21,6 +22,7 @@ const CustomCard = styled(Card)`
   left: 0;
   height: auto;
   margin-bottom: 2em;
+  border-radius: 4px;
 
   .card-body {
     padding: 0;
@@ -56,7 +58,7 @@ const CustomCard = styled(Card)`
   }
 
   ul li {
-    margin-top: .5em;
+    margin-top: .8em;
     list-style-type: none;
   }
 
@@ -184,7 +186,7 @@ const Plans = () => {
                        <Col xs={{span: 3}}>
                          <span className="dollar">$5</span>
                        </Col>
-                       <Col xs={{span: 9}}>
+                       <Col xs={{span: 5}}>
                          <span className="plan">Per user / month billed annually</span>
                        </Col>
                      </Row>
