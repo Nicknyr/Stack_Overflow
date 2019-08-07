@@ -2,6 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Card, Button, Container, Row, Col, ButtonToolbar, ListGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 
 const Styles = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:700&display=swap');
@@ -35,11 +37,27 @@ const CustomCard = styled(Card)`
   }
 
   .card-text {
-    padding: 1em .5em;
+    padding: .5em .5em;
+
+    .dollar {
+      font-weight: 700;
+      font-family: 'Roboto Slab', serif;
+      font-size: 2em;
+    }
+
+    .plan {
+      color: purple;
+      font-size: .8em;
+    }
+  }
+
+  ul {
+    padding-left: .5em;
   }
 
   ul li {
     margin-top: .5em;
+    list-style-type: none;
   }
 
   .card-text {
@@ -54,8 +72,9 @@ const H2 = styled.h2`
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.5em;
-  font-weight: bolder;
+  margin-bottom: 16px;
+  font-size: 1.6em;
+  font-weight: 700;
   font-family: 'Roboto Slab', serif;
   width: 100%;
   color: white;
@@ -64,10 +83,14 @@ const H2 = styled.h2`
 const P = styled.p`
   text-align: center;
   font-weight: 500;
-  font-size: .95em;
+  font-size: .96em;
+  color: #242729;
+  line-height: 1.2;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
   color: white;
-  line-height: 1.3;
-  margin-bottom: 2em;
 `;
 
 const A = styled.a`
@@ -83,7 +106,7 @@ const Bar = styled.div`
   background: #f2720c;
   width: 80px;
   height: 6px;
-  margin: 1.3em auto;
+  margin: 2em auto;
   display: block;
 `;
 
@@ -94,7 +117,13 @@ const CustomButton = styled(Button)`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2em;
+  margin-top: 2em;
+  margin-bottom: 3.5em;
+  height: 2.8em;
+  width: 8em;
+  font-size: .95em;
+  color: white;
+  font-weight: 500;
 
   &:hover {
     background: #f2720c;
@@ -108,7 +137,7 @@ const BlueButton = styled(Button)`
   margin-right: auto;
   display: block;
   border-radius: 2px;
-  width: 95%;
+  width: 100%;
   height: 2.7em;
 
   &:hover {
@@ -117,9 +146,10 @@ const BlueButton = styled(Button)`
 `;
 
 const CONTAINER = styled(Container)`
-  padding-top: 5em;
+  padding-top: 7em;
   padding-bottom: 5em;
 `;
+
 
 const Plans = () => {
   return (
@@ -149,13 +179,76 @@ const Plans = () => {
               </ListGroup>
                 <Card.Text>
                   <ul>
-                   <li>$5 Per user / month billed annually</li>
-                   <li>Free 14 day trial</li>
-                   <li> A single team hosted on stackoverflow.com</li>
-                   <li>Unlimited private questions and answers</li>
-                   <li>Searchable archive</li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 3}}>
+                         <span className="dollar">$5</span>
+                       </Col>
+                       <Col xs={{span: 9}}>
+                         <span className="plan">Per user / month billed annually</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Free 14 day trial</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>A single team hosted on stackoverflow.com</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Unlimited private questions and answers</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Searchable archive</span>
+                       </Col>
+                     </Row>
+                   </li>
                   </ul>
-                  <BlueButton variant="primary" className="text-center">Create your team</BlueButton>
+                  <Col xs={{span: 12}}>
+                    <BlueButton variant="primary" className="text-center">Create your team</BlueButton>
+                  </Col>
                 </Card.Text>
             </Card.Body>
             </CustomCard>
@@ -173,15 +266,103 @@ const Plans = () => {
               </ListGroup>
                 <Card.Text>
                   <ul>
-                   <li>$11 Per user / month billed annually</li>
-                   <li>All the features of Basic</li>
-                   <li>Single Sign-On (SSO), with SAML</li>
-                   <li> Invoicing</li>
-                   <li>Reporting and Analytics</li>
-                   <li>Priority customer support</li>
-                   <li>99.5% uptime</li>
+                    <Row>
+                      <Col xs={{span: 3}}>
+                        <span className="dollar">$11</span>
+                      </Col>
+                      <Col xs={{span: 9}}>
+                        <span className="plan">Per user / month billed annually</span>
+                      </Col>
+                    </Row>
+                   <li> </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>All the features of Basic</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Single Sign-On (SSO), with SAML</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Invoicing</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Reporting and Analytics</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Priority customer support</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>99.5% uptime</span>
+                       </Col>
+                     </Row>
+                   </li>
                   </ul>
-                  <BlueButton variant="primary" className="text-center">Request a demo</BlueButton>
+                  <Col xs={{span: 12}}>
+                    <BlueButton variant="primary" className="text-center">Request a demo</BlueButton>
+                  </Col>
                 </Card.Text>
             </Card.Body>
           </CustomCard>
@@ -199,16 +380,116 @@ const Plans = () => {
               </ListGroup>
                 <Card.Text>
                   <ul>
-                   <li>$17 Per user / month billed annually</li>
-                   <li>All the features of Basic and Business</li>
-                   <li>Host on your cloud, your own servers, or our private cloud</li>
-                   <li>Single Sign-On: AD, SAML</li>
-                   <li>Robust Read and Write API</li>
-                   <li>Dedicated Customer Success and Community Building</li>
-                   <li>99.5% uptime</li>
-                   <li>Customized Themes and Privileges</li>
+                    <Row>
+                      <Col xs={{span: 3}}>
+                        <span className="dollar">$17</span>
+                      </Col>
+                      <Col xs={{span: 9}}>
+                        <span className="plan">Per user / month billed annually</span>
+                      </Col>
+                    </Row>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>All the features of Basic and Business</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Host on your cloud, your own servers, or our private cloud</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Single Sign-On: AD, SAML</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Robust Read and Write API</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Dedicated Customer Success and Community Building</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>99.5% uptime</span>
+                       </Col>
+                     </Row>
+                   </li>
+                   <li>
+                     <Row>
+                       <Col xs={{span: 1}}>
+                         <FontAwesomeIcon
+                           icon={faCheck}
+                           size="md"
+                           color="grey"
+                           />
+                       </Col>
+                       <Col xs={{span: 10}}>
+                         <span>Customized Themes and Privileges</span>
+                       </Col>
+                     </Row>
+                   </li>
                   </ul>
-                  <BlueButton variant="primary" className="text-center">Request a demo</BlueButton>
+                  <Col xs={{span: 12}}>
+                    <BlueButton variant="primary" className="text-center">Request a demo</BlueButton>
+                  </Col>
                 </Card.Text>
             </Card.Body>
            </CustomCard>

@@ -16,14 +16,14 @@ const Styles = styled.div`
 
   .feature-container {
     background: white;
-    height: 8em;
+    height: 9em;
     margin-bottom: 2em;
     display: flex;
     align-items: center;
     box-shadow: 0 4px 8px rgba(59,64,69,0.2);
     line-height: 1.2;
     font-size: 1em;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 1em;
 
     p {
@@ -71,7 +71,7 @@ const P = styled.p`
   margin-left: auto;
   margin-right: auto;
   margin-top: 3em;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
 `;
 
 const A = styled.a`
@@ -105,7 +105,7 @@ const Features = () => {
           <Col xs={{span: 8, offset: 2}} md={{span: 3, offset: 1}}>
             <Row className="feature-container">
               <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
-                <img src={findCandidate} alt="find candidate" height="75" width="75" />
+                <img src={privateQuestions} alt="private questions" height="75" width="75" />
               </Col>
               <Col xs={{span: 8, offset: 1}} md={{span: 10, offset: 1}}>
                 <p>Quickly find and share internal knowledge with <A href="$">Private Q&A</A></p>
@@ -115,7 +115,7 @@ const Features = () => {
            <Col xs={{span: 8, offset: 2}} md={{span: 3, offset: 1}}>
              <Row className="feature-container">
                <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
-                 <img src={privateQuestions} alt="private questions" height="75" width="75" />
+                 <img src={findCandidate} alt="find candidate" height="75" width="75" />
                </Col>
                <Col xs={{span: 8, offset: 1}} md={{span: 10, offset: 1}}>
                  <p>Find the perfect candidate for your growing technical team with Talent solutions</p>
