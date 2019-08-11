@@ -109,7 +109,7 @@ class Questions extends React.Component {
             <Row>
               <Col className="questions-section" xs={{span: 4}}>
                 <Col xs={{span: 12}} className="one" onClick={this.handleClick}>
-                  <img src={questions1} alt="questions" height="50" width="50"/>
+                  <img src={questions1} className="one" alt="questions" height="50" width="50"/>
                 </Col>
                 <Col xs={{span: 12}}>
                   <p>Ask a question</p>
