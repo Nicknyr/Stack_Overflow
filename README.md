@@ -5,6 +5,17 @@
 # Stack Overflow Clone
 ### A Stack Overflow website clone built using React, React-Bootstrap, Styled Components, and Animate-on-Scroll
 
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
