@@ -6,11 +6,13 @@
 ### A Stack Overflow website clone built using React, React-Bootstrap, Styled Components, and Animate-on-Scroll
 
 
-
-
-
-
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
