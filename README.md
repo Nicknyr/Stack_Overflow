@@ -1,3 +1,9 @@
+# Stack Overflow Clone
+
+![Image Stack Overflow logo](https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png?v=9c558ec15d8a)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
