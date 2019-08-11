@@ -20,12 +20,11 @@ const Styles = styled.div`
   padding-bottom: 10em;
 
   .questions-section {
-      &:hover {
-        box-shadow: 0 4px 12px rgba(36,39,41,0.2) !important;
-      }
-
-      padding: 12px;
+    padding: 12px;
+    &:hover {
+      box-shadow: 0 4px 12px rgba(36,39,41,0.2) !important;
     }
+   }
 
   label {
     width: 100%;
@@ -51,9 +50,19 @@ const Styles = styled.div`
     display: none;
   }
 
-  .hide-img {
-    display: none;
+  .featured-question {
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    img {
+      max-width: 100%;
+    }
   }
+
+  .highlighted {
+    box-shadow: 0 4px 12px rgba(36,39,41,0.2) !important;
+  }
+
 `;
 
 const H2 = styled.h2`
@@ -72,7 +81,7 @@ const H3 = styled.h3`
   font-size: 1.3em;
   text-align: center;
   padding-top: 2em;
-  padding-bottom: 2em;
+  padding-bottom: .8em;
 `;
 
 const Bar = styled.div`
@@ -112,8 +121,6 @@ class QuestionsRadio extends React.Component {
     this.setState({
       isVisible: e.target.value
     });
-
-    console.log(this.state.isVisible);
   }
 
   render() {
@@ -125,8 +132,11 @@ class QuestionsRadio extends React.Component {
             <Bar></Bar>
             <Container>
             <Row>
-              <Col className="questions-section" xs={{span: 4}} >
-                <label className="cursor-pointer one" onClick={this.handleClick}>
+              <Col
+                xs={{span: 4}}
+                className={this.state.isVisible === 'option1' ? 'highlighted' : 'questions-section'}
+              >
+                <label className="cursor-pointer" onClick={this.handleClick}>
                   <input
                     type="radio"
                     value="option1"
@@ -141,8 +151,11 @@ class QuestionsRadio extends React.Component {
                   </Col>
                 </label>
               </Col>
-              <Col className="questions-section" xs={{span: 4}}>
-                <label className="cursor-pointer one" onClick={this.handleClick}>
+              <Col
+                xs={{span: 4}}
+                className={this.state.isVisible === 'option2' ? 'highlighted' : 'questions-section'}
+               >
+                <label className="cursor-pointer" onClick={this.handleClick}>
                   <input
                     type="radio"
                     value="option2"
@@ -155,8 +168,11 @@ class QuestionsRadio extends React.Component {
                   <span>Vote on everything</span>
                 </label>
               </Col>
-              <Col className="questions-section" xs={{span: 4}}>
-                <label className="cursor-pointer one" onClick={this.handleClick}>
+              <Col
+                xs={{span: 4}}
+                className={this.state.isVisible === 'option3' ? 'highlighted' : 'questions-section'}
+              >
+                <label className="cursor-pointer" onClick={this.handleClick}>
                   <input
                     type="radio"
                     value="option3"
@@ -169,8 +185,11 @@ class QuestionsRadio extends React.Component {
                   <span>Answer questions</span>
                 </label>
               </Col>
-              <Col className="questions-section" xs={{span: 4}}>
-                <label className="cursor-pointer one" onClick={this.handleClick}>
+              <Col
+                xs={{span: 4}}
+                className={this.state.isVisible === 'option4' ? 'highlighted' : 'questions-section'}
+              >
+                <label className="cursor-pointer" onClick={this.handleClick}>
                   <input
                     type="radio"
                     value="option4"
@@ -183,8 +202,11 @@ class QuestionsRadio extends React.Component {
                   <span>Tag your question</span>
                 </label>
               </Col>
-              <Col className="questions-section" xs={{span: 4}}>
-                <label className="cursor-pointer one" onClick={this.handleClick}>
+              <Col
+                xs={{span: 4}}
+                className={this.state.isVisible === 'option5' ? 'highlighted' : 'questions-section'}
+              >
+                <label className="cursor-pointer" onClick={this.handleClick}>
                   <input
                     type="radio"
                     value="option5"
@@ -197,8 +219,11 @@ class QuestionsRadio extends React.Component {
                   <span>Accept an answer</span>
                 </label>
               </Col>
-              <Col className="questions-section" xs={{span: 4}}>
-                <label className="cursor-pointer one" onClick={this.handleClick}>
+              <Col
+                xs={{span: 4}}
+                className={this.state.isVisible === 'option6' ? 'highlighted' : 'questions-section'}
+              >
+                <label className="cursor-pointer" onClick={this.handleClick}>
                   <input
                     type="radio"
                     value="option6"
@@ -218,7 +243,7 @@ class QuestionsRadio extends React.Component {
                 {
                   this.state.isVisible === 'option1' ?
                     <Col xs={{span: 12}}>
-                        <img src={questionsBig1} alt="featured image"/>
+                      <img src={questionsBig1} alt="featured image"/>
                     </Col>
                   : ""
                 }
@@ -262,8 +287,6 @@ class QuestionsRadio extends React.Component {
                     </Col>
                   : ""
                 }
-
-
                 <H3>Ask a question publicly on 170+ Stack Exchange sites or privately using Stack Overflow for Teams.</H3>
                 <BUTTON>Create an account</BUTTON>
               </Col>
