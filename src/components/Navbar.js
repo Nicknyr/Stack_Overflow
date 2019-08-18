@@ -15,39 +15,24 @@ import {
   Row} from 'react-bootstrap';
 
 const NAVBAR = styled(Navbar)`
-  .form-inline {
-    width: 60%;
-  }
-
-  .form-inline {
-    width: 70%;
-  }
-
-  .form-control {
-    width: 80%;
-  }
-
-  .navbar-nav {
-    width: 30%;
-  }
-
-  .navbar-brand {
-    width: 12%;
-  }
-
-  .nav-link {
-    font-size: 14px;
-    font-weight: 500;
-  }
 
 `;
 
 const BUTTON = styled(Button)`
   font-size: 12px;
   font-weight: bold;
-  background: #0095ff;
-  border: 1px solid #07c;
-  box-shadow: inset 0 1px 0 #66bfff;
+  background: #F48024;
+  border: 1px solid #F48024;
+  box-shadow: inset 0 1px 0 #F48024;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &:hover {
+    background: #F48024;
+    border: 1px solid #F48024;
+    box-shadow: inset 0 1px 0 #F48024;
+  }
 `;
 
 const loginButton = styled(Button)`
@@ -57,30 +42,30 @@ const loginButton = styled(Button)`
 class NavBar extends Component {
   render() {
     return (
-      <NAVBAR bg="light" expand="md">
-        <Navbar.Brand href="#home" className="mr-4">
-          <img
-            src={logo}
-            height="40"
-            width="200"
-            className="d-inline-block align-middle"
-            alt="stackoverflow logo"
-          />
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home">
+          Nav Brand
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-2">
-            <Nav.Link href="#home">Products</Nav.Link>
-            <Nav.Link href="#link">Customers</Nav.Link>
-            <Nav.Link href="#home">Use cases</Nav.Link>
+          <Nav className="mr-auto">
+            <Nav.Link href="#home">
+              <BUTTON>Products</BUTTON>
+            </Nav.Link>
+            <Nav.Link href="#link">
+              <BUTTON>Customers</BUTTON>
+            </Nav.Link>
+            <Nav.Link href="#link">
+              <BUTTON>Use cases</BUTTON>
+            </Nav.Link>
           </Nav>
-            <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2"/>
-              <loginButton className="mr-2">Log In</loginButton>
-              <BUTTON>Sign Up</BUTTON>
-            </Form>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+          </Form>
         </Navbar.Collapse>
-      </NAVBAR>
+      </Navbar>
+
     );
   }
 }
