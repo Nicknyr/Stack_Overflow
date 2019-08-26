@@ -34,8 +34,16 @@ const Styles = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: .9em;
-    padding-left: 2em;
+
   }
+
+  @media(min-width: 992px){
+    .col-xl-3 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+
 
 `;
 
@@ -48,11 +56,19 @@ const H2 = styled.h2`
   font-family: 'Roboto Slab', serif;
   width: 100%;
   padding-top: 5em;
+  padding-bottom: .7em;
+
+  @media(min-width: 768px) {
+    font-size: 2.1em !important;
+  }
+
+  @media(min-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const P = styled.p`
   text-align: center;
-  font-weight: 500;
   font-size: .95em;
   color: 242729;
   line-height: 1em;
@@ -73,6 +89,7 @@ const A = styled.a`
   margin-left: auto;
   margin-right: auto;
   padding: 16px !important;
+  box-shadow: 0 4px 8px rgba(59,64,69,0.2) !important;
 
   &:hover {
     color: #212529;
@@ -84,6 +101,7 @@ const A = styled.a`
   }
 `;
 
+
 const BUTTON = styled(Button)`
   background: #F48024;
   color: white;
@@ -94,22 +112,32 @@ const BUTTON = styled(Button)`
   height: 3em;
   width: 8em;
   display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 
   &:hover {
     background: #F48024;
   }
 `;
 
+const CONTAINER = styled(Container)`
+    max-width: 95%;
+`;
+
 
 const Jobs = () => {
   return (
     <Styles>
-        <Container>
+        <CONTAINER>
           <Row>
-            <Col xs={{span: 12,}} >
+            <Col xs={{span: 12}} >
               <H2>Looking for a job?</H2>
             </Col>
-            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 2, offset: 0}}>
+          </Row>
+          <Row>
+            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 3, offset: 0}}>
                 <A href="#">
                   <Row>
                     <Col xs={2}>
@@ -121,7 +149,7 @@ const Jobs = () => {
                   </Row>
                 </A>
             </Col>
-            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 2, offset: 0}}>
+            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 3, offset: 0}}>
               <A href="#">
                 <Row>
                   <Col xs={2}>
@@ -133,19 +161,19 @@ const Jobs = () => {
                 </Row>
               </A>
             </Col>
-            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 2, offset: 0}}>
+            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 3, offset: 0}}>
               <A href="#">
                 <Row>
-                  <Col xs={2}>
+                  <Col xs={2} lg={{span: 4}}>
                     <img src={jobsVisa} alt="jobs visa" height="50" width="50"/>
                   </Col>
-                  <Col xs={{span: 9, offset: 1}} className="anchor-p">
+                  <Col xs={{span: 9, offset: 1}} lg={{span: 7, offset: 1}} className="anchor-p">
                     <p>Browse jobs by visa sponsorship</p>
                   </Col>
                 </Row>
               </A>
             </Col>
-            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 2, offset: 0}}>
+            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 3, offset: 0}}>
               <A href="#">
                 <Row>
                   <Col xs={2}>
@@ -157,14 +185,14 @@ const Jobs = () => {
                 </Row>
               </A>
             </Col>
-            <Col xs={12} xl={{span: 2, offset: 0}}>
+            <Col className="button-container" xs={12} xl={{span: 3, offset: 0}}>
               <BUTTON>View all jobs</BUTTON>
             </Col>
             <Col xs={{span: 1, offset: 11 }} className="robot">
               <img src={robot} alt="robot" height="50" width="50"/>
             </Col>
           </Row>
-        </Container>
+      </CONTAINER>
     </Styles>
   );
 }

@@ -33,10 +33,22 @@ const Styles = styled.div`
       margin-bottom: 0;
       margin-top: 0;
     }
+  }
 
-    @media(min-width: 768px) {
+
+  @media(min-width: 768px) {
+    .col-md-3 {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    .feature-container {
       height: 15em;
       padding: 20px;
+
+      p {
+        font-size: 1.1em;
+      }
     }
   }
 
@@ -72,6 +84,7 @@ const P = styled.p`
   margin-right: auto;
   margin-top: 3em;
   margin-bottom: 5em;
+
 `;
 
 const A = styled.a`
@@ -101,36 +114,48 @@ const Features = () => {
             </P>
           </Col>
         </Row>
-        <Row>
-          <Col xs={{span: 8, offset: 2}} md={{span: 3, offset: 1}}>
-            <Row className="feature-container">
-              <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
-                <img src={privateQuestions} alt="private questions" height="75" width="75" />
-              </Col>
-              <Col xs={{span: 8, offset: 1}} md={{span: 10, offset: 1}}>
-                <p>Quickly find and share internal knowledge with <A href="$">Private Q&A</A></p>
-              </Col>
-            </Row>
-           </Col>
-           <Col xs={{span: 8, offset: 2}} md={{span: 3, offset: 1}}>
-             <Row className="feature-container">
-               <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
-                 <img src={findCandidate} alt="find candidate" height="75" width="75" />
-               </Col>
-               <Col xs={{span: 8, offset: 1}} md={{span: 10, offset: 1}}>
-                 <p>Find the perfect candidate for your growing technical team with Talent solutions</p>
-              </Col>
-             </Row>
-            </Col>
-            <Col xs={{span: 8, offset: 2}} md={{span: 3, offset: 1}}>
+        <Row className="d-flex justify-content-md-around">
+          <Col
+            xs={{span: 8, offset: 2}}
+            md={{span: 3, offset: 0}}
+            lg={{span: 3, offset: 0}}
+            >
               <Row className="feature-container">
-                <Col xs={{span: 3}} md={{span: 6, offset: 3}}>
-                  <img src={accelerate} alt="accelerate" height="75" width="75" />
+                <Col xs={{span: 3}} md={{span: 12}} lg={{span: 2}} className="text-center">
+                  <img src={privateQuestions} alt="private questions" height="75" width="75" />
                 </Col>
-                <Col xs={{span: 8, offset: 1}} md={{span: 10, offset: 1}}>
-                  <p>Accelerate the discovery of your products or services through our <A href="#">Advertising platform</A></p>
+                <Col xs={{span: 8, offset: 1}} md={{span: 12, offset: 0}} lg={{span: 9, offset: 1}}>
+                  <p>Quickly find and share internal knowledge with <A href="$">Private Q&A</A></p>
                 </Col>
               </Row>
+           </Col>
+           <Col
+             xs={{span: 8, offset: 2}}
+             md={{span: 3, offset: 0}}
+             lg={{span: 3, offset: 0}}
+             >
+               <Row className="feature-container">
+                 <Col xs={{span: 3}} md={{span: 12}} lg={{span: 3}} className="text-center">
+                   <img src={findCandidate} alt="find candidate" height="75" width="75" />
+                 </Col>
+                 <Col xs={{span: 8, offset: 1}} md={{span: 12, offset: 0}} lg={{span: 9}}>
+                   <p>Find the perfect candidate for your growing technical team with Talent solutions</p>
+                </Col>
+               </Row>
+            </Col>
+            <Col
+              xs={{span: 8, offset: 2}}
+              md={{span: 3, offset: 0}}
+              lg={{span: 3, offset: 0}}
+              >
+                <Row className="feature-container">
+                  <Col xs={{span: 3}} md={{span:12}} lg={{span: 3}} className="text-center">
+                    <img src={accelerate} alt="accelerate" height="75" width="75" />
+                  </Col>
+                  <Col xs={{span: 8, offset: 1}} md={{span: 12, offset: 0}} lg={{span: 9}}>
+                    <p>Accelerate the discovery of your products or services through our <A href="#">Advertising platform</A></p>
+                  </Col>
+                </Row>
               </Col>
            </Row>
       </CONTAINER>

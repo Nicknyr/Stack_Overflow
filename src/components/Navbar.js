@@ -15,7 +15,22 @@ import {
   Row} from 'react-bootstrap';
 
 const NAVBAR = styled(Navbar)`
+    .form-inline {
+      width: 70%;
 
+      input {
+        width: 70%;
+      }
+
+      .btn .btn-outline-success{
+
+      }
+    }
+
+    .basic-navbar-nav {
+      margin-right: 0;
+      margin: 0;
+    }
 `;
 
 const BUTTON = styled(Button)`
@@ -42,13 +57,13 @@ const loginButton = styled(Button)`
 class NavBar extends Component {
   render() {
     return (
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">
-          Nav Brand
-        </Navbar.Brand>
+      <NAVBAR bg="light" expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Brand href="#home">
+          <img src={logo} alt="stack overflow logo" width="180"/>
+        </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="">
             <Nav.Link href="#home">
               <BUTTON>Products</BUTTON>
             </Nav.Link>
@@ -60,11 +75,12 @@ class NavBar extends Component {
             </Nav.Link>
           </Nav>
           <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <FormControl type="text" placeholder="Search" className="mr-sm-2 ml-auto" />
+            <Button variant="outline-success">Log in</Button>
             <Button variant="outline-success">Search</Button>
           </Form>
         </Navbar.Collapse>
-      </Navbar>
+      </NAVBAR>
 
     );
   }

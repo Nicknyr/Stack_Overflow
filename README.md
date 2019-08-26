@@ -1,3 +1,23 @@
+
+
+![Image Stack Overflow logo](https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png?v=9c558ec15d8a)
+
+# Stack Overflow Clone
+### A Stack Overflow website clone built using React, React-Bootstrap, Styled Components, and Animate-on-Scroll
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

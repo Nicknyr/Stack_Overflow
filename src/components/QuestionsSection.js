@@ -108,16 +108,12 @@ class QuestionsSection extends React.Component {
     this.state = {
       isVisible: "option1"
     };
-
-    this.handleOptionChange = this.handleOptionChange.bind(this);
   }
 
   handleOptionChange = e => {
     this.setState({
       isVisible: e.target.value
     });
-
-    alert("function called");
   }
 
   render() {
@@ -129,7 +125,7 @@ class QuestionsSection extends React.Component {
             <Bar></Bar>
             <QuestionsItems
               isVisible={this.state.isVisible}
-              handleOptionChange={this.state.handleOptionChange}
+              handleOptionChange={this.handleOptionChange}
             />
             <H3>Ask a question publicly on 170+ Stack Exchange sites or privately using Stack Overflow for Teams.</H3>
             <BUTTON>Create an account</BUTTON>
