@@ -29,10 +29,10 @@ const QuestionsItems = (props) => {
                   checked={props.isVisible === 'option1'}
                   onChange={props.handleOptionChange}>
                 </input>
-                <Col xs={{span: 12}}>
+                <Col xs={{span: 12}} className="text-center">
                   <img src={questions1} alt="pic" height="50"/>
                 </Col>
-                <p>Ask a question</p>
+                <p className="text-center">Ask a question</p>
               </label>
             </Col>
             <Col className={props.isVisible === 'option2' ? 'highlighted' : 'questions-section'}>
@@ -43,10 +43,10 @@ const QuestionsItems = (props) => {
                   checked={props.isVisible === 'option2'}
                   onChange={props.handleOptionChange}>
                 </input>
-                <Col xs={{span: 12}}>
+                <Col xs={{span: 12}} className="text-center">
                   <img src={questions2} alt="pic" height="50"/>
                 </Col>
-                <p>Vote on everything</p>
+                <p className="text-center">Vote on everything</p>
               </label>
             </Col>
             <Col className={props.isVisible === 'option3' ? 'highlighted' : 'questions-section'}>
@@ -57,10 +57,10 @@ const QuestionsItems = (props) => {
                   checked={props.isVisible === 'option3'}
                   onChange={props.handleOptionChange}>
                 </input>
-                <Col xs={{span: 12}}>
+                <Col xs={{span: 12}} className="text-center">
                   <img src={questions3} alt="pic" height="50"/>
                 </Col>
-                <p>Answer questions</p>
+                <p className="text-center">Answer questions</p>
               </label>
             </Col>
         </Row>
@@ -73,10 +73,10 @@ const QuestionsItems = (props) => {
                 checked={props.isVisible === 'option4'}
                 onChange={props.handleOptionChange}>
               </input>
-              <Col xs={{span: 12}}>
+              <Col xs={{span: 12}} className="text-center">
                 <img src={questions4} alt="pic" height="50"/>
               </Col>
-              <p>Tag your question</p>
+              <p className="text-center">Tag your question</p>
             </label>
           </Col>
           <Col className={props.isVisible === 'option5' ? 'highlighted' : 'questions-section'}>
@@ -87,10 +87,10 @@ const QuestionsItems = (props) => {
                 checked={props.isVisible === 'option5'}
                 onChange={props.handleOptionChange}>
               </input>
-              <Col xs={{span: 12}}>
+              <Col xs={{span: 12}} className="text-center">
                 <img src={questions5} alt="pic" height="50"/>
               </Col>
-              <p>Accept an answer</p>
+              <p className="text-center">Accept an answer</p>
             </label>
           </Col>
           <Col className={props.isVisible === 'option6' ? 'highlighted' : 'questions-section'}>
@@ -101,10 +101,10 @@ const QuestionsItems = (props) => {
                 checked={props.isVisible === 'option6'}
                 onChange={props.handleOptionChange}>
               </input>
-              <Col xs={{span: 12}}>
+              <Col xs={{span: 12}} className="text-center">
                 <img src={questions6} alt="pic" height="50"/>
               </Col>
-              <p>Get recognized</p>
+              <p className="text-center">Get recognized</p>
             </label>
           </Col>
         </Row>

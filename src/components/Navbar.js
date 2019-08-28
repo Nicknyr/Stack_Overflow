@@ -12,24 +12,12 @@ import {
   Container,
   Brand,
   Col,
-  Row} from 'react-bootstrap';
+  Row,
+  InputGroup} from 'react-bootstrap';
 
 const NAVBAR = styled(Navbar)`
-    .form-inline {
-      width: 70%;
-
-      input {
-        width: 70%;
-      }
-
-      .btn .btn-outline-success{
-
-      }
-    }
-
-    .basic-navbar-nav {
-      margin-right: 0;
-      margin: 0;
+    .input-group {
+      width: 50%;
     }
 `;
 
@@ -57,31 +45,55 @@ const loginButton = styled(Button)`
 class NavBar extends Component {
   render() {
     return (
-      <NAVBAR bg="light" expand="lg">
+      <div>
+      <NAVBAR bg="light" expand="all">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Brand href="#home">
-          <img src={logo} alt="stack overflow logo" width="180"/>
-        </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="">
             <Nav.Link href="#home">
-              <BUTTON>Products</BUTTON>
+              <a href="">Home</a>
             </Nav.Link>
-            <Nav.Link href="#link">
-              <BUTTON>Customers</BUTTON>
+            <Nav.Link href="#home">
+              <a href="">Stack Overflow</a>
             </Nav.Link>
-            <Nav.Link href="#link">
-              <BUTTON>Use cases</BUTTON>
+            <Nav.Link href="#home">
+              <a href="">Tags</a>
+            </Nav.Link>
+            <Nav.Link href="#home">
+              <a href="">Users</a>
+            </Nav.Link>
+            <Nav.Link href="#home">
+              <a href="">Programming Jobs</a>
             </Nav.Link>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2 ml-auto" />
-            <Button variant="outline-success">Log in</Button>
-            <Button variant="outline-success">Search</Button>
-          </Form>
         </Navbar.Collapse>
+        <Navbar.Brand href="#home">
+          <img src={logo} alt="stack overflow logo" width="180"/>
+        </Navbar.Brand>
+        <Nav className="mr-auto d-inline-block">
+          <Nav.Link href="#" className="d-inline">
+            <BUTTON>Products</BUTTON>
+          </Nav.Link>
+          <Nav.Link href="#link" className="d-inline">
+            <BUTTON>Customers</BUTTON>
+          </Nav.Link>
+          <Nav.Link href="#link" className="d-inline">
+            <BUTTON>Use cases</BUTTON>
+          </Nav.Link>
+        </Nav>
       </NAVBAR>
-
+      <InputGroup>
+        <FormControl
+          placeholder="Search..."
+          aria-label="Search"
+          aria-describedby="basic-addon2"
+        />
+        <InputGroup.Append>
+          <Button variant="outline-secondary">Log in</Button>
+          <Button variant="outline-secondary">Sign up</Button>
+        </InputGroup.Append>
+      </InputGroup>
+    </div>
     );
   }
 }

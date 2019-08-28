@@ -20,9 +20,8 @@ const Styles = styled.div`
   padding-top: 5em;
   padding-bottom: 10em;
 
-  .container {
-    padding-left: 0;
-    padding-right:0;
+  img {
+    max-width: 100%;
   }
 
   .cursor-pointer {
@@ -38,18 +37,14 @@ const Styles = styled.div`
   }
 
   .questions-section {
-    img {
-      text-align: center;
-    }
-
-    p {
-      text-align: center;
-    }
+    padding: 5px;
   }
 
   .highlighted {
-    padding: 12px;
+    padding: 5px;
     box-shadow: 0 4px 12px rgba(36,39,41,0.2) !important;
+    border: 1px solid rgba(36,39,41,0.2);
+    border-radius: 5px;
   }
 
   @media(min-width: 768px) {
