@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import styled, { css } from 'styled-components';
 import sprites from '../assets/sprites.svg';
 import logo from '../assets/stack-overflow-logo-large.svg';
+import logoSmall from '../assets/logoSmall.png';
+import ToggleMenuNavbar from './ToggleMenuNavbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Navbar,
   Nav,
@@ -94,51 +97,58 @@ const SIGNUPBUTTON = styled(BUTTON)`
   }
 `;
 
+/*
+<nav class="navbar navbar-dark bg-dark">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+ </nav>
+*/
 class NavBar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displaySearchbarBottom: true
+    }
+  }
+
+  handleClick = () => {
+    this.setState(prevState => ({
+      displaySearchbarBottom: !prevState.displaySearchbarBottom
+    }));
+  }
+
   render() {
     return (
       <NAVBAR className="fixed-top justify-content-between d-flex py-0" bg="light" expand="all">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="">
-            <Nav.Link href="#home">
-              <a href="">Home</a>
-            </Nav.Link>
-            <Nav.Link href="#home">
-              <a href="">Stack Overflow</a>
-            </Nav.Link>
-            <Nav.Link href="#home">
-              <a href="">Tags</a>
-            </Nav.Link>
-            <Nav.Link href="#home">
-              <a href="">Users</a>
-            </Nav.Link>
-            <Nav.Link href="#home">
-              <a href="">Programming Jobs</a>
-            </Nav.Link>
-          </Nav>
         </Navbar.Collapse>
         <Navbar.Brand href="#home">
-          <img src={logo} alt="stack overflow logo" width="160"/>
+          <img src={logo} className="d-none d-md-block" alt="stack overflow logo" width="160"/>
+          <img src={logoSmall} className="d-md-none d-xs-block" alt="stack overflow logo" width="45"/>
         </Navbar.Brand>
         <Nav className="mr-auto d-inline-block">
           <Nav.Link href="#" className="d-inline mr-1">
             <ORANGEBUTTON>Products</ORANGEBUTTON>
           </Nav.Link>
-          <Nav.Link href="#link" className="d-inline mr-1">
+          <Nav.Link href="#link" className="d-none d-md-inline-block mr-1">
             <BUTTON>Customers</BUTTON>
           </Nav.Link>
-          <Nav.Link href="#link" className="d-inline mr-1">
+          <Nav.Link href="#link" className="d-none d-md-inline-block mr-1">
             <BUTTON>Use cases</BUTTON>
           </Nav.Link>
         </Nav>
+        <FontAwesomeIcon onClick={this.handleClick} className="business-icon d-md-none" icon="search" />
         <InputGroup className="input-group-sm ml-4">
           <FormControl
             placeholder="Search..."
             aria-label="Search"
             aria-describedby="basic-addon2"
+            className="d-none d-md-block"
           />
-        <InputGroup.Append className="ml-4">
+          <InputGroup.Append className="ml-auto">
             <LOGINBUTTON variant="outline-secondary mr-1">Log in</LOGINBUTTON>
             <SIGNUPBUTTON variant="outline-secondary">Sign up</SIGNUPBUTTON>
           </InputGroup.Append>

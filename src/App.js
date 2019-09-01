@@ -10,12 +10,19 @@ import Hire from './components/Hire';
 import Learn from './components/Learn';
 import Jobs from './components/Jobs';
 import Questions from './components/Questions';
+import ToggleMenuNavbar from './components/ToggleMenuNavbar';
 import QuestionsSection from './components/QuestionsSection';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee, faAngleRight, faCheck } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCheckSquare,
+  faAngleRight,
+  faCheck,
+  faGlobeAmericas,
+  faBusinessTime,
+  faSearch} from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faCheckSquare, faCoffee, faAngleRight, faCheck);
+library.add(fab, faCheckSquare, faAngleRight, faCheck, faGlobeAmericas, faBusinessTime, faSearch);
 
 const Button = styled.button`
   background: transparent;
@@ -35,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      
       <Landing />
       <About />
       <Features />
