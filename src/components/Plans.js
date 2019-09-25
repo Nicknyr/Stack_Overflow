@@ -22,7 +22,7 @@ const CustomCard = styled(Card)`
   left: 0;
   height: auto;
   margin-bottom: 2em;
-  border-radius: 4px;
+  border-radius: 5px;
 
   .card-body {
     padding: 0;
@@ -30,11 +30,11 @@ const CustomCard = styled(Card)`
 
   .card-subtitle {
     text-align: center;
+    font-size: .9em;
   }
 
   .card-title {
     font-family: 'Roboto Slab', serif;
-    font-weight: light;
     color: 242729;
   }
 
@@ -44,17 +44,23 @@ const CustomCard = styled(Card)`
     .dollar {
       font-weight: 700;
       font-family: 'Roboto Slab', serif;
-      font-size: 2em;
+      font-size: 1.9em;
     }
 
     .plan {
-      color: purple;
-      font-size: .8em;
+      color: #242729;
+      font-size: .7em;
+      display: inline-block;
+      width: 100px;
+      margin-bottom: 0;
+      margin-left: 5px;
     }
   }
 
   ul {
     padding-left: .5em;
+    //padding-top: 1em;
+    padding-bottom: .8em;
   }
 
   ul li {
@@ -182,12 +188,13 @@ const Plans = () => {
                 <Card.Text>
                   <ul>
                    <li>
-                     <Row>
-                       <Col xs={{span: 3}}>
+                     <Row className="no-gutters">
+                       <Col xs={{span: 2}} md={{span: 3}}>
                          <span className="dollar">$5</span>
                        </Col>
-                       <Col xs={{span: 5}}>
-                         <span className="plan">Per user / month billed annually</span>
+                       <Col xs={{span: 4}}>
+                         <p className="plan">Per user / month</p>
+                         <p className="plan">billed annually</p>
                        </Col>
                      </Row>
                    </li>
@@ -268,12 +275,13 @@ const Plans = () => {
               </ListGroup>
                 <Card.Text>
                   <ul>
-                    <Row>
-                      <Col xs={{span: 3}}>
+                    <Row className="no-gutters">
+                      <Col xs={{span: 2}} md={{span: 3}}>
                         <span className="dollar">$11</span>
                       </Col>
-                      <Col xs={{span: 9}}>
-                        <span className="plan">Per user / month billed annually</span>
+                      <Col xs={{span: 4}}>
+                        <p className="plan">Per user / month</p>
+                        <p className="plan">billed annually</p>
                       </Col>
                     </Row>
                    <li> </li>
@@ -382,12 +390,13 @@ const Plans = () => {
               </ListGroup>
                 <Card.Text>
                   <ul>
-                    <Row>
-                      <Col xs={{span: 3}}>
+                    <Row className="no-gutters">
+                      <Col xs={{span: 2}} md={{span: 3}}>
                         <span className="dollar">$17</span>
                       </Col>
-                      <Col xs={{span: 9}}>
-                        <span className="plan">Per user / month billed annually</span>
+                      <Col xs={{span: 4}}>
+                        <p className="plan">Per user / month</p>
+                        <p className="plan">billed annually</p>
                       </Col>
                     </Row>
                    <li>
