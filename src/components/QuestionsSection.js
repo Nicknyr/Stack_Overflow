@@ -47,6 +47,28 @@ const Styles = styled.div`
     border-radius: 5px;
   }
 
+  .pointer {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    overflow: hidden;
+    width: 16px;
+
+    &::after{
+      position: absolute;
+      top: 50%;
+      left: 3%;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border: 1px solid #d6d9dc;
+      box-shadow: 2px 0 8px rgba(59,64,69,0.1);
+      transform: translateY(-50%) translateX(-50%) rotate(45deg);
+      transition: all .2s;
+  }
+
   @media(min-width: 768px) {
 
   }

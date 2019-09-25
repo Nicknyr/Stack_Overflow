@@ -22,6 +22,9 @@ const QuestionsItems = (props) => {
         <Container className="d-flex flex-md-row flex-column justify-content-center">
           <Row className="d-flex flex-md-column flex-row order-1 justify-content-center">
             <Col className={props.isVisible === 'option1' ? 'highlighted' : 'questions-section'}>
+              {/* Applies arrow on highlighted item */}
+              <Col className={props.isVisible === 'option1' ? 'pointer' : null}>
+              </Col>
               <label className="cursor-pointer" onClick={props.handleOptionChange}>
                 <input
                   type="radio"
@@ -36,6 +39,9 @@ const QuestionsItems = (props) => {
               </label>
             </Col>
             <Col className={props.isVisible === 'option2' ? 'highlighted' : 'questions-section'}>
+              {/* Applies arrow on highlighted item */}
+              <Col className={props.isVisible === 'option2' ? 'pointer' : null}>
+              </Col>
               <label className="cursor-pointer" onClick={props.handleClick}>
                 <input
                   type="radio"
@@ -50,6 +56,9 @@ const QuestionsItems = (props) => {
               </label>
             </Col>
             <Col className={props.isVisible === 'option3' ? 'highlighted' : 'questions-section'}>
+              {/* Applies arrow on highlighted item */}
+              <Col className={props.isVisible === 'option3' ? 'pointer' : null}>
+              </Col>
               <label className="cursor-pointer" onClick={props.handleClick}>
                 <input
                   type="radio"
@@ -66,6 +75,9 @@ const QuestionsItems = (props) => {
         </Row>
         <Row className="d-flex flex-md-column align-items-end flex-row order-md-3 order-2 justify-content-center">
           <Col className={props.isVisible === 'option4' ? 'highlighted' : 'questions-section'}>
+            {/* Applies arrow on highlighted item */}
+            <Col className={props.isVisible === 'option4' ? 'pointer' : null}>
+            </Col>
             <label className="cursor-pointer" onClick={props.handleClick}>
               <input
                 type="radio"
@@ -80,6 +92,9 @@ const QuestionsItems = (props) => {
             </label>
           </Col>
           <Col className={props.isVisible === 'option5' ? 'highlighted' : 'questions-section'}>
+            {/* Applies arrow on highlighted item */}
+            <Col className={props.isVisible === 'option5' ? 'pointer' : null}>
+            </Col>
             <label className="cursor-pointer" onClick={props.handleClick}>
               <input
                 type="radio"
@@ -94,6 +109,9 @@ const QuestionsItems = (props) => {
             </label>
           </Col>
           <Col className={props.isVisible === 'option6' ? 'highlighted' : 'questions-section'}>
+            {/* Applies arrow on highlighted item */}
+            <Col className={props.isVisible === 'option6' ? 'pointer' : null}>
+            </Col>
             <label className="cursor-pointer" onClick={props.handleClick}>
               <input
                 type="radio"
