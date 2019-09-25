@@ -22,6 +22,11 @@ const Styles = styled.div`
     margin-bottom: 1.5em;
   }
 
+  .middle-card {
+    position: relative;
+    bottom: 70px;
+  }
+
 
 `;
 
@@ -32,7 +37,7 @@ const CustomCard = styled(Card)`
   `}
 
   padding: 1em;
-  height: auto;
+  height: 24em;
   margin-bottom: 2.5em;
   -webkit-box-shadow: 0px 6px 15px 1px rgba(212,208,212,0.76);
   -moz-box-shadow: 0px 6px 15px 1px rgba(212,208,212,0.76);
@@ -60,6 +65,7 @@ const CustomCard = styled(Card)`
     font-size: .9em;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
+
   }
 
   img {
@@ -90,6 +96,10 @@ const P = styled.p`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
+
+  @media(min-width: 726px) {
+    margin-bottom: 7em;
+  }
 `;
 
 const A = styled.a`
@@ -142,7 +152,6 @@ const BUTTON = styled(Button)`
 `;
 
 
-
 const About = () => {
   return (
     <Styles>
@@ -168,9 +177,7 @@ const About = () => {
               <Card.Text>
                   Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account.
               </Card.Text>
-              <Col xs={{span: 8, offset: 2}}>
-                <BUTTON purple>Browse Questions</BUTTON>
-              </Col>
+              <BUTTON purple>Browse Questions</BUTTON>
             </Card.Body>
            </CustomCard>
            {/* On xs, sm, md screens show CustomCard without animation */}
@@ -183,15 +190,13 @@ const About = () => {
                <Card.Text>
                    Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account.
                </Card.Text>
-               <Col xs={{span: 12}}>
-                 <BUTTON purple>Browse Questions</BUTTON>
-               </Col>
+               <BUTTON purple>Browse Questions</BUTTON>
              </Card.Body>
             </CustomCard>
         </Col>
         <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
           {/* Only show animated CustomCard on large screens */}
-           <CustomCard data-aos="fade-up" className="d-none d-lg-block">
+           <CustomCard data-aos="fade-up" className="d-none d-lg-block middle-card">
              <Col xs={{span: 8, offset: 2}}>
                <img src={privateqa} alt="private qa" height="82" width="128"/>
              </Col>
@@ -200,9 +205,7 @@ const About = () => {
                <Card.Text>
                     Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
                </Card.Text>
-               <Col xs={{span: 6, offset: 3}}>
-                 <BUTTON orange>Learn more</BUTTON>
-               </Col>
+               <BUTTON orange>Learn more</BUTTON>
              </Card.Body>
             </CustomCard>
              {/* On xs, sm, md screens show CustomCard without animation */}
@@ -215,9 +218,7 @@ const About = () => {
                 <Card.Text>
                      Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
                 </Card.Text>
-                <Col xs={{span: 12}}>
-                  <BUTTON orange>Learn more</BUTTON>
-                </Col>
+                <BUTTON orange>Learn more</BUTTON>
               </Card.Body>
              </CustomCard>
           </Col>
@@ -225,31 +226,27 @@ const About = () => {
             {/* Only show animated CustomCard on large screens */}
             <CustomCard data-aos="fade-left" className="d-none d-lg-block">
               <Col xs={{span: 8, offset: 2}}>
-                <img src={jobs} alt="jobs" height="67" width="128"/>
+                <img src={jobs} alt="jobs" height="82" width="128"/>
               </Col>
               <Card.Body>
                 <Card.Title className="text-center">Browse jobs</Card.Title>
                 <Card.Text>
                     Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more.
                 </Card.Text>
-                <Col xs={{span: 6, offset: 3}}>
-                  <BUTTON purple>Find a job</BUTTON>
-                </Col>
+                <BUTTON purple>Find a job</BUTTON>
               </Card.Body>
              </CustomCard>
              {/* On xs, sm, md screens show CustomCard without animation */}
              <CustomCard className="d-block d-lg-none">
                <Col xs={{span: 12}}>
-                 <img src={jobs} alt="jobs" height="67" width="128"/>
+                 <img src={jobs} alt="jobs" height="82" width="128"/>
                </Col>
                <Card.Body>
                  <Card.Title className="text-center">Browse jobs</Card.Title>
                  <Card.Text>
                      Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more.
                  </Card.Text>
-                 <Col xs={{span: 12}}>
-                   <BUTTON purple>Find a job</BUTTON>
-                 </Col>
+                 <BUTTON purple>Find a job</BUTTON>
                </Card.Body>
               </CustomCard>
            </Col>
