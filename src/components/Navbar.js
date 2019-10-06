@@ -37,6 +37,7 @@ const NAVBAR = styled(Navbar)`
     .navbar-toggler {
       border: none !important;
       padding: 0;
+
     }
 `;
 
@@ -122,14 +123,11 @@ class NavBar extends Component {
   render() {
     return (
       <NAVBAR className="fixed-top justify-content-between d-flex py-0" bg="light" expand="all">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-        </Navbar.Collapse>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home" className="order-2">
           <img src={logo} className="d-none d-md-block" alt="stack overflow logo" width="160"/>
           <img src={logoSmall} className="d-md-none d-xs-block" alt="stack overflow logo" width="45"/>
         </Navbar.Brand>
-        <Nav className="mr-auto d-inline-block">
+        <Nav className="mr-auto d-inline-block order-3">
           <Nav.Link href="#" className="d-inline mr-1">
             <ORANGEBUTTON>Products</ORANGEBUTTON>
           </Nav.Link>
@@ -140,19 +138,22 @@ class NavBar extends Component {
             <BUTTON>Use cases</BUTTON>
           </Nav.Link>
         </Nav>
-        <FontAwesomeIcon onClick={this.handleClick} className="business-icon d-md-none" icon="search" />
-        <InputGroup className="input-group-sm ml-4">
+        <FontAwesomeIcon onClick={this.handleClick} className="business-icon d-md-none order-4" icon="search" />
+        <InputGroup className="input-group-sm ml-4 order-5">
           <FormControl
             placeholder="Search..."
             aria-label="Search"
             aria-describedby="basic-addon2"
             className="d-none d-md-block"
           />
-          <InputGroup.Append className="ml-auto">
+        <InputGroup.Append className="ml-auto order-6">
             <LOGINBUTTON variant="outline-secondary mr-1">Log in</LOGINBUTTON>
             <SIGNUPBUTTON variant="outline-secondary">Sign up</SIGNUPBUTTON>
           </InputGroup.Append>
         </InputGroup>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="order-1"/>
+        <Navbar.Collapse id="basic-navbar-nav">
+        </Navbar.Collapse>
       </NAVBAR>
 
     );
