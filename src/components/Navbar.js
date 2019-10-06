@@ -5,6 +5,7 @@ import logo from '../assets/stack-overflow-logo-large.svg';
 import logoSmall from '../assets/logoSmall.png';
 import ToggleMenuNavbar from './ToggleMenuNavbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import onClickOutside from 'react-onclickoutside';
 import {
   Navbar,
   Nav,
@@ -110,9 +111,17 @@ class NavBar extends Component {
     super(props);
 
     this.state = {
-      displaySearchbarBottom: true
+      displaySearchbarBottom: true,
+      showToggleMenu: false
     }
+
   }
+
+  handleClickOutside = evt => {
+    this.setState({
+      showToggleMenu: false
+    })
+  };
 
   handleClick = () => {
     this.setState(prevState => ({
@@ -120,9 +129,15 @@ class NavBar extends Component {
     }));
   }
 
+  menuClick = () => {
+    this.setState({
+      showToggleMenu: !this.state.showToggleMenu
+    })
+  }
+
   render() {
     return (
-      <NAVBAR className="fixed-top justify-content-between d-flex py-0" bg="light" expand="all">
+      <NAVBAR className="fixed-top justify-content-between d-flex py-0" bg="light" expand="all" ref={this.setWrapperRef}>
         <Navbar.Brand href="#home" className="order-2">
           <img src={logo} className="d-none d-md-block" alt="stack overflow logo" width="160"/>
           <img src={logoSmall} className="d-md-none d-xs-block" alt="stack overflow logo" width="45"/>
@@ -151,13 +166,20 @@ class NavBar extends Component {
             <SIGNUPBUTTON variant="outline-secondary">Sign up</SIGNUPBUTTON>
           </InputGroup.Append>
         </InputGroup>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="order-1"/>
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="order-1"
+          onClick={this.menuClick}/>
         <Navbar.Collapse id="basic-navbar-nav">
         </Navbar.Collapse>
+        {this.state.showToggleMenu ?
+          <ToggleMenuNavbar />
+          : null
+        }
       </NAVBAR>
 
     );
   }
 }
 
-export default NavBar;
+export default onClickOutside(NavBar);

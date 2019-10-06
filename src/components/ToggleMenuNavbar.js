@@ -11,9 +11,11 @@ const Styles = styled.div`
   height: auto;
   width: 15em;
   z-index: 1000;
-  border-right: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
-  box-shadow: 0 0 0 rgba(12,13,14,0.05);
+  padding-bottom: 1em;
+  border-left: 1px solid #e4e6e8;
+  border-right: 1px solid #e4e6e8;
+  border-bottom: 1px solid #e4e6e8;
+  box-shadow: 0 2px 2px rgba(12,13,14,0.2);
 
   .svg-inline--fa {
     margin-right: 4px;
@@ -23,12 +25,16 @@ const Styles = styled.div`
     color: #F48024;
   }
 
-  ul li {
-    list-style-type: none;
-    font-size: 13px;
-    line-height: 1.8;
-    padding-top: 4px;
-    padding-bottom: 4px;
+
+  ul {
+    padding-left: 0;
+
+    li {
+      list-style-type: none;
+      font-size: 13px;
+      line-height: 1.8;
+      padding-top: 4px;
+      padding-bottom: 4px;
 
     a {
       color: #535a60;
@@ -39,6 +45,7 @@ const Styles = styled.div`
       }
     }
   }
+}
 
   h4 {
     font-size: .8em;
@@ -50,6 +57,10 @@ const Styles = styled.div`
     padding: 3px;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+
+  .indent {
+    padding-left: 1.5em;
   }
 `;
 
@@ -70,13 +81,13 @@ const ToggleMenuNavbar = () => {
               <a href="#">Stack Overflow</a>
             </span>
           </li>
-          <li>
+          <li className="indent">
             <a href="#">Tags</a>
           </li>
-          <li>
+          <li className="indent">
             <a href="#">Users</a>
           </li>
-          <li>
+          <li className="indent">
             <a href="#">Developer Jobs</a>
           </li>
         </ul>
