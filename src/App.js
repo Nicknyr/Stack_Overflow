@@ -9,7 +9,6 @@ import Plans from './components/Plans';
 import Hire from './components/Hire';
 import Learn from './components/Learn';
 import Jobs from './components/Jobs';
-import Questions from './components/Questions';
 import ToggleMenuNavbar from './components/ToggleMenuNavbar';
 import QuestionsSection from './components/QuestionsSection';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -42,7 +41,6 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      
       <Landing />
       <About />
       <Features />

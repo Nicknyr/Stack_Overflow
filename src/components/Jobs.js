@@ -27,6 +27,7 @@ const Styles = styled.div`
     }
   }
 
+
   .anchor-p {
     position: absolute;
     top: 50%;
@@ -34,6 +35,8 @@ const Styles = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: .9em;
+    //background: red;
+    padding-left: 2em;
 
   }
 
@@ -42,6 +45,10 @@ const Styles = styled.div`
       flex: 0 0 20%;
       max-width: 20%;
     }
+  }
+
+  .center {
+    margin: 0 auto;
   }
 
 
@@ -137,19 +144,27 @@ const Jobs = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 3, offset: 0}}>
+            <Col
+              xs={{span: 9,}}
+              sm={{span: 6, offset: 0}}
+              xl={{span: 3, offset: 0}}
+              className="center">
                 <A href="#">
                   <Row>
-                    <Col xs={2}>
-                      <img src={jobsTech} alt="jobs tech" height="50" width="50" />
-                    </Col>
+                      <Col xs={2}>
+                        <img src={jobsTech} alt="jobs tech" height="50" width="50" />
+                      </Col>
                     <Col xs={{span: 9, offset: 1}} className="anchor-p">
                       <p>Browse jobs by technology</p>
                     </Col>
                   </Row>
                 </A>
             </Col>
-            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 3, offset: 0}}>
+            <Col
+              xs={{span: 9}}
+              sm={{span: 6, offset: 0}}
+              xl={{span: 3, offset: 0}}
+              className="center">
               <A href="#">
                 <Row>
                   <Col xs={2}>
@@ -161,7 +176,11 @@ const Jobs = () => {
                 </Row>
               </A>
             </Col>
-            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 3, offset: 0}}>
+            <Col
+              xs={{span: 9}}
+              sm={{span: 6, offset: 0}}
+              xl={{span: 3, offset: 0}}
+              className="center">
               <A href="#">
                 <Row>
                   <Col xs={2} lg={{span: 4}}>
@@ -173,7 +192,11 @@ const Jobs = () => {
                 </Row>
               </A>
             </Col>
-            <Col xs={{span: 8, offset: 2}} md={{span: 6, offset: 0}} xl={{span: 3, offset: 0}}>
+            <Col
+              xs={{span: 9}}
+              sm={{span: 6, offset: 0}}
+              xl={{span: 3, offset: 0}}
+              className="center">
               <A href="#">
                 <Row>
                   <Col xs={2}>
