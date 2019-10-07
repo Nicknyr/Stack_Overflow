@@ -166,7 +166,7 @@ const About = () => {
         </Col>
       </Row>
       <Row>
-        <Col xs={{span: 12, offset: 0}} md={{span: 4, offset: 0}}>
+        <Col xs={{span: 10, offset: 1}} md={{span: 4, offset: 0}}>
           {/* Only show animated CustomCard on large screens */}
           <CustomCard data-aos="fade-right" className="d-none d-lg-block">
             <Col xs={{span: 8, offset: 2}}>
@@ -194,7 +194,7 @@ const About = () => {
              </Card.Body>
             </CustomCard>
         </Col>
-        <Col xs={{span: 12, offset: 0}} md={{span: 4, offset: 0}}>
+        <Col xs={{span: 10, offset: 1}} md={{span: 4, offset: 0}}>
           {/* Only show animated CustomCard on large screens */}
            <CustomCard data-aos="fade-up" className="d-none d-lg-block middle-card">
              <Col xs={{span: 8, offset: 2}}>
@@ -222,7 +222,7 @@ const About = () => {
               </Card.Body>
              </CustomCard>
           </Col>
-          <Col xs={{span: 12, offset: 0}} md={{span: 4, offset: 0}}>
+          <Col xs={{span: 10, offset: 1}} md={{span: 4, offset: 0}}>
             {/* Only show animated CustomCard on large screens */}
             <CustomCard data-aos="fade-left" className="d-none d-lg-block">
               <Col xs={{span: 8, offset: 2}}>
