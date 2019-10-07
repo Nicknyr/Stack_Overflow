@@ -37,7 +37,7 @@ const CustomCard = styled(Card)`
   `}
 
   padding: 1em;
-  height: 24em;
+  height: auto;
   margin-bottom: 2.5em;
   -webkit-box-shadow: 0px 6px 15px 1px rgba(212,208,212,0.76);
   -moz-box-shadow: 0px 6px 15px 1px rgba(212,208,212,0.76);
@@ -127,8 +127,8 @@ const BUTTON = styled(Button)`
   font-weight: 500;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
   width: auto;
   height: 3em;
   margin-left: auto;
@@ -166,7 +166,7 @@ const About = () => {
         </Col>
       </Row>
       <Row>
-        <Col xs={{span:8, offset: 2}} md={{span: 4, offset: 0}}>
+        <Col xs={{span: 12, offset: 0}} md={{span: 4, offset: 0}}>
           {/* Only show animated CustomCard on large screens */}
           <CustomCard data-aos="fade-right" className="d-none d-lg-block">
             <Col xs={{span: 8, offset: 2}}>
@@ -194,7 +194,7 @@ const About = () => {
              </Card.Body>
             </CustomCard>
         </Col>
-        <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
+        <Col xs={{span: 12, offset: 0}} md={{span: 4, offset: 0}}>
           {/* Only show animated CustomCard on large screens */}
            <CustomCard data-aos="fade-up" className="d-none d-lg-block middle-card">
              <Col xs={{span: 8, offset: 2}}>
@@ -222,7 +222,7 @@ const About = () => {
               </Card.Body>
              </CustomCard>
           </Col>
-          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}}>
+          <Col xs={{span: 12, offset: 0}} md={{span: 4, offset: 0}}>
             {/* Only show animated CustomCard on large screens */}
             <CustomCard data-aos="fade-left" className="d-none d-lg-block">
               <Col xs={{span: 8, offset: 2}}>

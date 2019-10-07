@@ -13,21 +13,20 @@ const Styles = styled.div`
   bbackground-repeat: no-repeat;
   background-position: top center;
   width: 100%;
-  height: 35em;
-  margin-bottom: 1em;
+  height: 110VH;
   position: relative;
 
   @media (min-width: 768px) {
     background-image: url(${landingLarge});
     background-repeat: no-repeat;
     background-position: top center;
-    height: 32em;
+    height: 34em;
   }
 `;
 
 const LandingH1 = styled.h1`
   font-family: 'Roboto Slab', serif;
-  font-size: 2em;
+  font-size: 2.1em;
   text-align: center;
   font-weight: bolder;
   position: relative;
@@ -55,6 +54,7 @@ const LandingContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-top: 1em;
   transform: translate(-50%, -50%);
 `;
 
@@ -102,10 +102,10 @@ const Landing = () => {
       <Container>
       <LandingContainer>
         <Row>
-          <Col xs={{ span: 10, offset: 1}} md={{span: 12, offset: 0}}>
+          <Col xs={{span: 12}} md={{span: 12, offset: 0}}>
             <LandingH1>We &lt;3 people who code</LandingH1>
           </Col>
-          <Col xs={{ span: 8, offset: 2}} md={{span: 6, offset: 3}} lg={{span: 4, offset: 4}}>
+          <Col xs={{span: 10, offset: 1}} md={{span: 8, offset: 2}} lg={{span: 4, offset: 4}}>
             <LandingP>We build products that empower developers and connect them to solutions that enable productivity, growth, and discovery.</LandingP>
           </Col>
         </Row>

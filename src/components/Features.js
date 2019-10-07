@@ -24,7 +24,6 @@ const Styles = styled.div`
     line-height: 1.2;
     font-size: 1em;
     border-radius: 10px;
-    padding: 1em;
 
     p {
       color: #242729;
@@ -123,43 +122,46 @@ const Features = () => {
         </Row>
         <Row className="d-flex justify-content-md-around">
           <Col
-            xs={{span: 8, offset: 2}}
+            xs={{span: 10, offset: 1}}
+            sm={{span: 8, offset: 2}}
             md={{span: 3, offset: 0}}
             lg={{span: 3, offset: 0}}
             >
               <Row className="feature-container">
-                <Col xs={{span: 3}} md={{span: 12}} lg={{span: 4}} className="text-center">
+                <Col xs={{span: 5}} md={{span: 12}} lg={{span: 4}} className="text-center">
                   <img src={privateQuestions} alt="private questions" height="75" width="75" />
                 </Col>
-                <Col xs={{span: 8, offset: 1}} md={{span: 12, offset: 0}} lg={{span: 7, offset: 0}}>
+                <Col xs={{span: 7}} md={{span: 12, offset: 0}} lg={{span: 7, offset: 0}}>
                   <p>Quickly find and share internal knowledge with <A href="$">Private Q&A</A></p>
                 </Col>
               </Row>
            </Col>
            <Col
-             xs={{span: 8, offset: 2}}
+             xs={{span: 10, offset: 1}}
+             sm={{span: 8, offset: 2}}
              md={{span: 3, offset: 0}}
              lg={{span: 3, offset: 0}}
              >
                <Row className="feature-container">
-                 <Col xs={{span: 3}} md={{span: 12}} lg={{span: 4}} className="text-center">
+                 <Col xs={{span: 5}} md={{span: 12}} lg={{span: 4}} className="text-center">
                    <img src={findCandidate} alt="find candidate" height="75" width="75" />
                  </Col>
-                 <Col xs={{span: 8, offset: 1}} md={{span: 12, offset: 0}} lg={{span: 7}}>
+                 <Col xs={{span: 7}} md={{span: 12, offset: 0}} lg={{span: 7}}>
                    <p>Find the perfect candidate for your growing technical team with <A href="$">Talent solutions</A></p>
                 </Col>
                </Row>
             </Col>
             <Col
-              xs={{span: 8, offset: 2}}
+              xs={{span: 10, offset: 1}}
+              sm={{span: 8, offset: 2}}
               md={{span: 3, offset: 0}}
               lg={{span: 3, offset: 0}}
               >
                 <Row className="feature-container">
-                  <Col xs={{span: 3}} md={{span:12}} lg={{span: 4}} className="text-center">
+                  <Col xs={{span: 5}} md={{span:12}} lg={{span: 4}} className="text-center">
                     <img src={accelerate} alt="accelerate" height="75" width="75" />
                   </Col>
-                  <Col xs={{span: 8, offset: 1}} md={{span: 12, offset: 0}} lg={{span: 7}}>
+                  <Col xs={{span: 7}} md={{span: 12, offset: 0}} lg={{span: 7}}>
                     <p>Accelerate the discovery of your products or services through our <A href="#">Advertising platform</A></p>
                   </Col>
                 </Row>
