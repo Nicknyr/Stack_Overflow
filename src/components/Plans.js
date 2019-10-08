@@ -23,6 +23,17 @@ const CustomCard = styled(Card)`
   height: auto;
   margin-bottom: 2em;
   border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @media(min-width: 425px) {
+    width: 85%;
+  }
+
+  @media(min-width: 500px) {
+    width: 95%;
+  }
 
   .card-body {
     padding: 0;
@@ -40,6 +51,7 @@ const CustomCard = styled(Card)`
 
   .card-text {
     padding: .5em .5em;
+    width: 100%;
 
     .dollar {
       font-weight: 700;
@@ -86,6 +98,14 @@ const H2 = styled.h2`
   font-family: 'Roboto Slab', serif;
   width: 100%;
   color: white;
+
+  @media (min-width: 768px) {
+    font-size: 2em;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 2.1em;
+  }
 `;
 
 const P = styled.p`
@@ -94,11 +114,19 @@ const P = styled.p`
   font-size: .96em;
   color: #242729;
   line-height: 1.2;
-  width: 95%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
   color: white;
+  font-weight: 500;
+
+  @media (min-width: 768px) {
+    font-size: 1em;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1.1em;
+  }
 `;
 
 const A = styled.a`
@@ -114,7 +142,7 @@ const Bar = styled.div`
   background: #f2720c;
   width: 80px;
   height: 6px;
-  margin: 2em auto;
+  margin: 1.5em auto;
   display: block;
 `;
 
@@ -126,12 +154,16 @@ const CustomButton = styled(Button)`
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
-  margin-bottom: 3.5em;
+  margin-bottom: 3em;
   height: 2.8em;
   width: 8em;
   font-size: .95em;
   color: white;
   font-weight: 500;
+
+  @media (min-width: 992px) {
+    margin-bottom: .5em;
+  }
 
   &:hover {
     background: #f2720c;
@@ -154,7 +186,7 @@ const BlueButton = styled(Button)`
 `;
 
 const CONTAINER = styled(Container)`
-  padding-top: 7em;
+  padding-top: 8em;
   padding-bottom: 5em;
 `;
 
@@ -164,11 +196,19 @@ const Plans = () => {
     <Styles>
       <CONTAINER>
       <Row>
-        <Col xs={{span: 12}} md={{span: 8, offset: 2}}>
+        <Col
+          xs={{span: 12}}
+          md={{span: 8, offset: 2}}
+          lg={{span: 6, offset: 3}}>
           <H2>Unlock siloed knowledge with Stack Overflow for Teams</H2>
           <Bar></Bar>
         </Col>
-        <Col xs={{span: 10, offset: 1}} md={{span: 8, offset: 2}}>
+        <Col
+          xs={{span: 11}}
+          sm={{span: 12, offset: 0}}
+          md={{span: 7}}
+          lg={{span: 5}}
+          className="mx-auto">
           <P>
             Wikis, chat messages, or formal documentation for knowledge management aren’t effective. Our question and answer format is a proven approach for accessing the right information in less time.
           </P>
@@ -176,7 +216,12 @@ const Plans = () => {
         </Col>
       </Row>
       <Row>
-        <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}} className="d-flex align-items-end">
+        <Col
+          xs={{span: 10, offset: 1}}
+          sm={{span: 6, offset: 3}}
+          md={{span: 6, offset: 3}}
+          lg={{span: 4, offset: 0}}
+          className="d-flex align-items-end">
           <CustomCard small>
             <Card.Body>
               <ListGroup variant="flush">
@@ -262,7 +307,12 @@ const Plans = () => {
             </Card.Body>
             </CustomCard>
           </Col>
-          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset: 0}} className="d-flex align-items-end">
+          <Col
+            xs={{span: 10, offset: 1}}
+            sm={{span: 6, offset: 3}}
+            md={{span: 6, offset: 3}}
+            lg={{span: 4, offset: 0}}
+            className="d-flex align-items-end">
             <CustomCard medium>
             <Card.Body>
               <ListGroup variant="flush">
@@ -377,7 +427,12 @@ const Plans = () => {
             </Card.Body>
           </CustomCard>
           </Col>
-          <Col xs={{span: 8, offset: 2}} md={{span: 4, offset:0}} className="d-flex align-items-end">
+          <Col
+            xs={{span: 10, offset: 1}}
+            sm={{span: 6, offset: 3}}
+            md={{span: 6, offset: 3}}
+            lg={{span: 4, offset: 0}}
+            className="d-flex align-items-end">
             <CustomCard large>
             <Card.Body>
               <ListGroup variant="flush">

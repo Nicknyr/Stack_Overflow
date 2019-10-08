@@ -222,7 +222,7 @@ const About = () => {
               </Card.Body>
              </CustomCard>
           </Col>
-          <Col xs={{span: 10, offset: 1}} md={{span: 4, offset: 0}}>
+          <Col xs={{span: 10, offset: 1}} md={{span: 4, offset: 0}} >
             {/* Only show animated CustomCard on large screens */}
             <CustomCard data-aos="fade-left" className="d-none d-lg-block">
               <Col xs={{span: 8, offset: 2}}>
