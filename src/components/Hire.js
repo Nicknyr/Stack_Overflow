@@ -15,9 +15,6 @@ const Styles = styled.div`
   height: auto;
   margin-top: -3em;
 
-  .section {
-    margin-top: 4em;
-  }
 `;
 
 const CustomButton = styled(Button)`
@@ -47,8 +44,8 @@ const BlueButton = styled(Button)`
 `;
 
 const CONTAINER = styled(Container)`
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 128px !important;
+  padding-bottom: 128px !important;
 
 `;
 
@@ -56,6 +53,10 @@ const H3 = styled.h3`
   font-family: 'Roboto Slab', serif;
   font-size: 1.4em;
   font-weight: bolder;
+
+  @media(min-width: 768px) {
+    font-size: 1.7em;
+  }
 `;
 
 const P = styled.p`
@@ -63,16 +64,14 @@ const P = styled.p`
   font-size: .9em;
   font-weight: 500;
   line-height: 1.3;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
 `;
 
 const Hire = () => {
   return (
     <Styles>
       <CONTAINER>
-       <Row>
-         <Col xs={12} md={6} className="section">
+       <Row className="justify-content-around">
+         <Col xs={12} md={5} lg={6} className="mb-5 mb-md-0">
            <img src={findCandidate} height="75" width="75"/>
            <H3>Hire your technical talent</H3>
            <P>
@@ -80,7 +79,7 @@ const Hire = () => {
            </P>
            <CustomButton>Stack Overflow Talent</CustomButton>
          </Col>
-         <Col xs={12} md={6} className="section">
+         <Col xs={12} md={5} lg={6}>
            <img src={accelerate} height="75" width="75"/>
            <H3>Reach developers worldwide</H3>
            <P>

@@ -20,7 +20,7 @@ const QuestionsItems = (props) => {
     return (
       <div>
         <Container className="d-flex flex-md-row flex-column justify-content-center">
-          <Row className="col-md-3 d-flex flex-md-column flex-row order-1 justify-content-center">
+          <Row className="d-flex flex-md-column flex-row order-1 justify-content-center">
             <Col className={props.isVisible === 'option1' ? 'highlighted' : 'questions-section'}>
               {/* Applies arrow on highlighted item */}
               <Col className={props.isVisible === 'option1' ? 'pointer-left' : null}>
@@ -73,7 +73,7 @@ const QuestionsItems = (props) => {
               </label>
             </Col>
         </Row>
-        <Row className="col-md-3 d-flex flex-md-column align-items-end flex-row order-md-3 order-2 justify-content-center">
+        <Row className="d-flex flex-md-column align-items-end flex-row order-md-3 order-2 justify-content-center">
           <Col className={props.isVisible === 'option4' ? 'highlighted' : 'questions-section'}>
             {/* Applies arrow on highlighted item */}
             <Col className={props.isVisible === 'option4' ? 'pointer-right' : null}>

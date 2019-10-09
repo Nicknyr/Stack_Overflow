@@ -39,12 +39,14 @@ const Styles = styled.div`
 
   .questions-section {
     padding: 5px;
+    /*
     &:hover {
       padding: 5px;
       box-shadow: 0 4px 12px rgba(36,39,41,0.2) !important;
       border: 1px solid rgba(36,39,41,0.2);
       border-radius: 5px;
     }
+    */
   }
 
   .highlighted {
