@@ -39,6 +39,12 @@ const Styles = styled.div`
 
   .questions-section {
     padding: 5px;
+    &:hover {
+      padding: 5px;
+      box-shadow: 0 4px 12px rgba(36,39,41,0.2) !important;
+      border: 1px solid rgba(36,39,41,0.2);
+      border-radius: 5px;
+    }
   }
 
   .highlighted {
@@ -52,6 +58,7 @@ const Styles = styled.div`
 
   @media(min-width: 768px) {
     .pointer-left {
+      //background: red;
       position: absolute;
       top: 0;
       left: 100%;
@@ -59,41 +66,47 @@ const Styles = styled.div`
       overflow: hidden;
       width: 16px;
 
-      &::after{
-        position: absolute;
-        top: 50%;
-        left: 3%;
-        content: '';
-        width: 16px;
-        height: 16px;
-        background-color: #fff;
-        border: 1px solid #d6d9dc;
-        box-shadow: 2px 0 8px rgba(59,64,69,0.1);
-        transform: translateY(-50%) translateX(-50%) rotate(45deg);
-        transition: all .2s;
+        &::after{
+          position: absolute;
+          top: 50%;
+          left: 3%;
+          content: '';
+          width: 16px;
+          height: 16px;
+          background-color: #fff;
+          border: 1px solid #d6d9dc;
+          box-shadow: 2px 0 8px rgba(59,64,69,0.1);
+          transform: translateY(-50%) translateX(-50%) rotate(45deg);
+          transition: all .2s;
+        }
     }
 
     .pointer-right {
+      //background: red;
       position: absolute;
       top: 0;
-      left: 100%;
+      right: 100%;
       height: 100%;
       overflow: hidden;
       width: 16px;
 
-      &::after{
-        position: absolute;
-        top: 100px;
-        right: 100px;
-        content: '';
-        width: 16px;
-        height: 16px;
-        background-color: red;
-        border: 1px solid #d6d9dc;
-        box-shadow: 2px 0 8px rgba(59,64,69,0.1);
-        transform: translateY(-50%) translateX(-50%) rotate(45deg);
-        transition: all .2s;
+        &::after{
+          position: absolute;
+          top: 50%;
+          left: 97%;
+          content: '';
+          width: 16px;
+          height: 16px;
+          background-color: #fff;
+          border: 1px solid #d6d9dc;
+          box-shadow: 2px 0 8px rgba(59,64,69,0.1);
+          transform: translateY(-50%) translateX(-50%) rotate(45deg);
+          transition: all .2s;
+        }
     }
+
+
+
   }
 
 `;

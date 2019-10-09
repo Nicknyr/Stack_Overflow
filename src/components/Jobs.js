@@ -16,6 +16,14 @@ const Styles = styled.div`
   height: auto;
   position: relative;
 
+  @media(min-width: 769px) {
+    /*
+    .x {
+      max-width: 35%;
+    }
+    */
+  }
+
   .robot {
     position: relative;
     height: 200px;
@@ -29,14 +37,15 @@ const Styles = styled.div`
 
 
   .anchor-p {
+    padding: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: .9em;
-    //background: red;
-    padding-left: 2em;
+    padding-left: 1em;
+    //margin: 0 !important;
 
   }
 
@@ -47,10 +56,11 @@ const Styles = styled.div`
     }
   }
 
+/*
   .center {
     margin: 0 auto;
   }
-
+*/
 
 `;
 
@@ -58,7 +68,7 @@ const H2 = styled.h2`
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: bolder;
   font-family: 'Roboto Slab', serif;
   width: 100%;
@@ -66,11 +76,7 @@ const H2 = styled.h2`
   padding-bottom: .7em;
 
   @media(min-width: 768px) {
-    font-size: 2.1em !important;
-  }
-
-  @media(min-width: 768px) {
-    text-align: left;
+    font-size: 2.3em !important;
   }
 `;
 
@@ -89,13 +95,13 @@ const A = styled.a`
   background: white;
   border-radius: 5px;
   color: #212529;
-  font-family: 'Roboto Slab', serif;
-  font-weight: lighter;
+  font-family: 'Roboto', serif;
+  font-weight: 400;
   display: block;
   margin-bottom: 1em;
   margin-left: auto;
   margin-right: auto;
-  padding: 16px !important;
+  padding: 18px 10px;
   box-shadow: 0 4px 8px rgba(59,64,69,0.2) !important;
 
   &:hover {
@@ -127,10 +133,11 @@ const BUTTON = styled(Button)`
   &:hover {
     background: #F48024;
   }
+}
 `;
 
 const CONTAINER = styled(Container)`
-    max-width: 95%;
+    //max-width: 95%;
 `;
 
 
@@ -143,71 +150,84 @@ const Jobs = () => {
               <H2>Looking for a job?</H2>
             </Col>
           </Row>
-          <Row>
+          {/*<Row className="justify-content-lg-center justify-content-xl-around">*/}
+          <Row className="justify-content-md-center">
             <Col
-              xs={{span: 9,}}
+              xs={{span: 12}}
               sm={{span: 6, offset: 0}}
-              xl={{span: 3, offset: 0}}
-              className="center">
+              md={{span: 5, offset: 0}}
+              lg={{span: 4, offset: 0}}
+              xl={{span: 4, offset: 0}}
+              >
                 <A href="#">
                   <Row>
-                      <Col xs={2}>
+                      <Col xs={3}>
                         <img src={jobsTech} alt="jobs tech" height="50" width="50" />
                       </Col>
-                    <Col xs={{span: 9, offset: 1}} className="anchor-p">
+                    <Col xs={{span: 8, offset: 1}} className="anchor-p">
                       <p>Browse jobs by technology</p>
                     </Col>
                   </Row>
                 </A>
             </Col>
             <Col
-              xs={{span: 9}}
+              xs={{span: 12}}
               sm={{span: 6, offset: 0}}
-              xl={{span: 3, offset: 0}}
-              className="center">
+              md={{span: 5, offset: 0}}
+              lg={{span: 4, offset: 0}}
+              xl={{span: 4, offset: 0}}
+              >
               <A href="#">
                 <Row>
-                  <Col xs={2}>
+                  <Col xs={3}>
                     <img src={jobsSalary} alt="jobs salary" height="50" width="50"/>
                   </Col>
-                  <Col xs={{span: 9, offset: 1}} className="anchor-p">
+                  <Col xs={{span: 8, offset: 1}} className="anchor-p">
                     <p>Browse jobs by salary</p>
                   </Col>
                 </Row>
               </A>
             </Col>
+          {/*</Row>
+          <Row className="justify-content-lg-center justify-content-xl-around">*/}
             <Col
-              xs={{span: 9}}
+              xs={{span: 12}}
               sm={{span: 6, offset: 0}}
-              xl={{span: 3, offset: 0}}
-              className="center">
+              md={{span: 5, offset: 0}}
+              lg={{span: 4, offset: 0}}
+              xl={{span: 4, offset: 0}}
+              >
               <A href="#">
                 <Row>
-                  <Col xs={2} lg={{span: 4}}>
+                  <Col xs={3} lg={{span: 4}}>
                     <img src={jobsVisa} alt="jobs visa" height="50" width="50"/>
                   </Col>
-                  <Col xs={{span: 9, offset: 1}} lg={{span: 7, offset: 1}} className="anchor-p">
+                  <Col xs={{span: 8, offset: 1}} lg={{span: 7, offset: 1}} className="anchor-p">
                     <p>Browse jobs by visa sponsorship</p>
                   </Col>
                 </Row>
               </A>
             </Col>
             <Col
-              xs={{span: 9}}
+              xs={{span: 12}}
               sm={{span: 6, offset: 0}}
-              xl={{span: 3, offset: 0}}
-              className="center">
+              md={{span: 5, offset: 0}}
+              lg={{span: 4, offset: 0}}
+              xl={{span: 4, offset: 0}}
+              >
               <A href="#">
                 <Row>
-                  <Col xs={2}>
+                  <Col xs={3}>
                     <img src={jobsRemote} alt="jobs remote" height="50" width="50"/>
                   </Col>
-                  <Col xs={{span: 9, offset: 1}} className="anchor-p">
+                  <Col xs={{span: 8, offset: 1}} className="anchor-p">
                     <p>Browse remote-friendly jobs</p>
                   </Col>
                 </Row>
               </A>
             </Col>
+          </Row>
+          <Row className="justify-content-lg-center">
             <Col className="button-container" xs={12} xl={{span: 3, offset: 0}}>
               <BUTTON>View all jobs</BUTTON>
             </Col>
