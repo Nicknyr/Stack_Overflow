@@ -46,7 +46,7 @@ const BUTTON = styled(Button)`
   font-size: 12px;
   font-weight: bolder;
   border-radius: 20px;
-  padding: 6px 10px;
+  //padding: 6px 10px;
   color: #535a60;
   background: transparent;
   border: 0px transparent;
@@ -147,7 +147,7 @@ class NavBar extends Component {
             <BUTTON>Use cases</BUTTON>
           </Nav.Link>
         </Nav>
-        <FontAwesomeIcon onClick={this.handleClick} className="business-icon d-md-none order-4" icon="search" />
+          <FontAwesomeIcon onClick={this.handleClick} className="business-icon d-md-none order-4 ml-auto" icon="search" />
         <InputGroup className="input-group-sm ml-4 order-5">
           <FormControl
             placeholder="Search..."

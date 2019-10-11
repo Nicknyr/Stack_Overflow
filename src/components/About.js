@@ -11,7 +11,8 @@ const Styles = styled.div`
   background-color: white;
   width: 100%;
   height: auto;
-  padding-bottom: 3em;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   img {
      margin: 1.2em;
@@ -79,7 +80,7 @@ const H2 = styled.h2`
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 16px;
+  margin-bottom: 24px !important;
   font-size: 1.6em;
   font-weight: 700;
   font-family: 'Roboto Slab', serif;
@@ -95,7 +96,7 @@ const P = styled.p`
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 24px;
+  margin-bottom: 48px !important;
 
   @media(min-width: 726px) {
     margin-bottom: 7em;
@@ -115,7 +116,8 @@ const Bar = styled.div`
   background: #f2720c;
   width: 80px;
   height: 6px;
-  margin: 1.9em auto;
+  margin: 0 auto;
+  margin-bottom: 32px !important;
   display: block;
 `;
 
@@ -166,9 +168,9 @@ const About = () => {
         </Col>
       </Row>
       <Row>
-        <Col xs={{span: 10, offset: 1}} md={{span: 4, offset: 0}}>
           {/* Only show animated CustomCard on large screens */}
-          <CustomCard data-aos="fade-right" className="d-none d-lg-block">
+          <Col lg={{span: 4, offset: 0}} className="d-none d-lg-inline-block">
+          <CustomCard data-aos="fade-right">
             <Col xs={{span: 8, offset: 2}}>
               <img src={publicqa} alt="public qa" height="82" width="128" />
             </Col>
@@ -180,51 +182,59 @@ const About = () => {
               <BUTTON purple>Browse Questions</BUTTON>
             </Card.Body>
            </CustomCard>
+           </Col>
+
            {/* On xs, sm, md screens show CustomCard without animation */}
-           <CustomCard className="d-block d-lg-none">
-             <Col xs={{span: 12}}>
-               <img src={publicqa} alt="public qa" height="82" width="128" />
-             </Col>
-             <Card.Body>
-               <Card.Title className="text-center">Public Q&A</Card.Title>
-               <Card.Text>
-                   Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account.
-               </Card.Text>
-               <BUTTON purple>Browse Questions</BUTTON>
-             </Card.Body>
-            </CustomCard>
-        </Col>
-        <Col xs={{span: 10, offset: 1}} md={{span: 4, offset: 0}}>
+           <Col xs={{span: 12, offset: 0}} md={{span: 6, offset: 3}} className="d-block d-lg-none">
+             <CustomCard>
+               <Col xs={{span: 12}}>
+                 <img src={publicqa} alt="public qa" height="82" width="128" />
+               </Col>
+               <Card.Body>
+                 <Card.Title className="text-center">Public Q&A</Card.Title>
+                 <Card.Text>
+                     Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account.
+                 </Card.Text>
+                 <BUTTON purple>Browse Questions</BUTTON>
+               </Card.Body>
+              </CustomCard>
+           </Col>
+
           {/* Only show animated CustomCard on large screens */}
-           <CustomCard data-aos="fade-up" className="d-none d-lg-block middle-card">
-             <Col xs={{span: 8, offset: 2}}>
-               <img src={privateqa} alt="private qa" height="82" width="128"/>
-             </Col>
-             <Card.Body>
-               <Card.Title className="text-center">Private Q&A</Card.Title>
-               <Card.Text>
-                    Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
-               </Card.Text>
-               <BUTTON orange>Learn more</BUTTON>
-             </Card.Body>
-            </CustomCard>
-             {/* On xs, sm, md screens show CustomCard without animation */}
-            <CustomCard className="d-block d-lg-none">
-              <Col xs={{span: 12}}>
-                <img src={privateqa} alt="private qa" height="82" width="128"/>
-              </Col>
-              <Card.Body>
-                <Card.Title className="text-center">Private Q&A</Card.Title>
-                <Card.Text>
-                     Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
-                </Card.Text>
-                <BUTTON orange>Learn more</BUTTON>
-              </Card.Body>
-             </CustomCard>
-          </Col>
-          <Col xs={{span: 10, offset: 1}} md={{span: 4, offset: 0}} >
-            {/* Only show animated CustomCard on large screens */}
-            <CustomCard data-aos="fade-left" className="d-none d-lg-block">
+          <Col lg={{span: 4, offset: 0}} className="d-none d-lg-inline-block middle-card">
+             <CustomCard data-aos="fade-up">
+               <Col xs={{span: 8, offset: 2}}>
+                 <img src={privateqa} alt="private qa" height="82" width="128"/>
+               </Col>
+               <Card.Body>
+                 <Card.Title className="text-center">Private Q&A</Card.Title>
+                 <Card.Text>
+                      Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
+                 </Card.Text>
+                 <BUTTON orange>Learn more</BUTTON>
+               </Card.Body>
+              </CustomCard>
+            </Col>
+
+            {/* On xs, sm, md screens show CustomCard without animation */}
+            <Col xs={{span: 12, offset: 0}} md={{span: 6, offset: 3}} className="d-block d-lg-none">
+              <CustomCard>
+                <Col xs={{span: 12}}>
+                  <img src={privateqa} alt="private qa" height="82" width="128"/>
+                </Col>
+                <Card.Body>
+                  <Card.Title className="text-center">Private Q&A</Card.Title>
+                  <Card.Text>
+                       Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
+                  </Card.Text>
+                  <BUTTON orange>Learn more</BUTTON>
+                </Card.Body>
+               </CustomCard>
+            </Col>
+
+          {/* Only show animated CustomCard on large screens */}
+          <Col lg={{span: 4, offset: 0}} className="d-none d-lg-inline-block">
+            <CustomCard data-aos="fade-left">
               <Col xs={{span: 8, offset: 2}}>
                 <img src={jobs} alt="jobs" height="82" width="128"/>
               </Col>
@@ -236,8 +246,11 @@ const About = () => {
                 <BUTTON purple>Find a job</BUTTON>
               </Card.Body>
              </CustomCard>
-             {/* On xs, sm, md screens show CustomCard without animation */}
-             <CustomCard className="d-block d-lg-none">
+           </Col>
+
+            {/* On xs, sm, md screens show CustomCard without animation */}
+             <Col xs={{span: 12, offset: 0}} md={{span: 6, offset: 3}} className="d-block d-lg-none">
+             <CustomCard>
                <Col xs={{span: 12}}>
                  <img src={jobs} alt="jobs" height="82" width="128"/>
                </Col>
@@ -250,6 +263,7 @@ const About = () => {
                </Card.Body>
               </CustomCard>
            </Col>
+
          </Row>
       </Container>
     </Styles>
