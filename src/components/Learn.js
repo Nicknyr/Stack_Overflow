@@ -33,6 +33,10 @@ const H2 = styled.h2`
   font-weight: bolder;
   font-family: 'Roboto Slab', serif;
   width: 100%;
+
+  @media(min-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 const H3 = styled.h3`
@@ -82,8 +86,10 @@ const Learn = () => {
     <Styles>
       <Container>
         <Row>
-          <H2>Learn and grow with Stack Overflow</H2>
-          <Bar></Bar>
+          <Col xs={{span: 11}} md={{span: 8}} className="mx-auto">
+            <H2>Learn and grow with Stack Overflow</H2>
+            <Bar></Bar>
+          </Col>
         </Row>
         <Row>
           <Col xs={12} md={6} lg={3}>

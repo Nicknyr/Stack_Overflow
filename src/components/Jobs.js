@@ -76,7 +76,7 @@ const H2 = styled.h2`
   padding-bottom: .7em;
 
   @media(min-width: 768px) {
-    font-size: 2.3em !important;
+    font-size: 2em;
   }
 `;
 
@@ -146,7 +146,7 @@ const Jobs = () => {
     <Styles>
         <CONTAINER>
           <Row>
-            <Col xs={{span: 12}} >
+            <Col xs={{span: 11}} className="mx-auto">
               <H2>Looking for a job?</H2>
             </Col>
           </Row>

@@ -198,16 +198,17 @@ const Plans = () => {
       <Row>
         <Col
           xs={{span: 12}}
-          md={{span: 8, offset: 2}}
-          lg={{span: 6, offset: 3}}>
+          md={{span: 9}}
+          lg={{span: 7}}
+          className="mx-auto">
           <H2>Unlock siloed knowledge with Stack Overflow for Teams</H2>
           <Bar></Bar>
         </Col>
         <Col
           xs={{span: 11}}
           sm={{span: 12, offset: 0}}
-          md={{span: 7}}
-          lg={{span: 5}}
+          md={{span: 8}}
+          lg={{span: 6}}
           className="mx-auto">
           <P>
             Wikis, chat messages, or formal documentation for knowledge management aren’t effective. Our question and answer format is a proven approach for accessing the right information in less time.

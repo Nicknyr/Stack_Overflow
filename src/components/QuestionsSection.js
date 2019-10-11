@@ -121,7 +121,11 @@ const H2 = styled.h2`
   font-size: 1.6em;
   font-weight: 700;
   font-family: 'Roboto Slab', serif;
-  width: 100%;
+
+
+  @media(min-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 const H3 = styled.h3`
@@ -176,8 +180,10 @@ class QuestionsSection extends React.Component {
       <div>
         <Styles>
           <Container>
-            <H2>Questions are everywhere, answers are on Stack Overflow</H2>
-            <Bar></Bar>
+            <Col xs={{span: 12}} lg={{span: 11}} className="p-0 mx-auto">
+              <H2>Questions are everywhere, answers are on Stack Overflow</H2>
+              <Bar></Bar>
+            </Col>
             <QuestionsItems
               isVisible={this.state.isVisible}
               handleOptionChange={this.handleOptionChange}

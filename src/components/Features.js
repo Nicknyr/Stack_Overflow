@@ -69,6 +69,10 @@ const H2 = styled.h2`
   width: 100%;
   font-size: 1.6em;
   font-weight: 700;
+
+  @media(min-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 const Bar = styled.div`
@@ -112,7 +116,11 @@ const Features = () => {
     <Styles>
       <CONTAINER>
         <Row>
-          <Col xs={{span: 12}} md={{span: 8, offset: 2}}>
+          <Col
+            xs={{span: 12}}
+            md={{span: 10, offset: 1}} 
+            lg={{span: 9}}
+            className="mx-auto">
             <H2>For businesses, by developers</H2>
             <Bar></Bar>
             <P>

@@ -20,8 +20,14 @@ const Styles = styled.div`
 
   .greeting {
     margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    //margin-bottom: 48px !important;
+
+    @media(min-width: 768px) {
+      margin-bottom: 70px !important;
+    }
   }
+
+
 
   .middle-card {
     position: relative;
@@ -85,6 +91,10 @@ const H2 = styled.h2`
   font-weight: 700;
   font-family: 'Roboto Slab', serif;
   width: 100%;
+
+  @media(min-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 const P = styled.p`
@@ -159,7 +169,7 @@ const About = () => {
     <Styles>
       <Container>
       <Row>
-        <Col className="greeting" xs={{span: 12}} md={{span: 8, offset: 2}}>
+        <Col className="greeting" xs={{span: 12}} md={{span: 10, offset: 1}} lg={{span: 8, offset: 2}}>
           <H2 >For developers, by developers</H2>
           <Bar></Bar>
           <P>
@@ -185,7 +195,10 @@ const About = () => {
            </Col>
 
            {/* On xs, sm, md screens show CustomCard without animation */}
-           <Col xs={{span: 12, offset: 0}} md={{span: 6, offset: 3}} className="d-block d-lg-none">
+           <Col
+             xs={{span: 12, offset: 0}}
+             md={{span: 6, offset: 3}}
+             className="d-block d-lg-none">
              <CustomCard>
                <Col xs={{span: 12}}>
                  <img src={publicqa} alt="public qa" height="82" width="128" />
@@ -217,7 +230,10 @@ const About = () => {
             </Col>
 
             {/* On xs, sm, md screens show CustomCard without animation */}
-            <Col xs={{span: 12, offset: 0}} md={{span: 6, offset: 3}} className="d-block d-lg-none">
+            <Col
+              xs={{span: 12}}
+              md={{span: 6, offset: 3}}
+              className="d-block d-lg-none">
               <CustomCard>
                 <Col xs={{span: 12}}>
                   <img src={privateqa} alt="private qa" height="82" width="128"/>
@@ -249,7 +265,10 @@ const About = () => {
            </Col>
 
             {/* On xs, sm, md screens show CustomCard without animation */}
-             <Col xs={{span: 12, offset: 0}} md={{span: 6, offset: 3}} className="d-block d-lg-none">
+             <Col
+               xs={{span: 12}}
+               md={{span: 6, offset: 3}}
+               className="d-block d-lg-none">
              <CustomCard>
                <Col xs={{span: 12}}>
                  <img src={jobs} alt="jobs" height="82" width="128"/>
